@@ -6,19 +6,18 @@ import { authOptions } from "@/lib/auth";
 const prisma = new PrismaClient();
 
 // DELETE: Delete a service
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+// DELETE: Delete a service
+export async function DELETE(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
     const session = await getServerSession(authOptions as any);
     if (!session || !["ADMIN"].includes(session.user.role)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
     try {
-        const { id } = params; // Params might be a promise in Next 15+, but let's assume standard behavior or await if needed
-        // Note: In Next.js 15, params is a Promise. We should check Next version. 
-        // Given the context of "NextJs 16.1.1 (Turbopack)" in user logs, 'params' IS A PROMISE via props but in Route Handlers the typings are slightly different. 
-        // Actually in Route Handlers matching [id], params is passed. Let's strictly follow Next 15+ patterns if possible, 
-        // but the provided type definition in standard docs usually shows it as object.
-        // However, recent changelogs say APIs might change. Let's safer assume it acts as an object for now or handle it.
+        const { id } = await params;
 
         await prisma.service.delete({
             where: { id },
