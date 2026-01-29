@@ -34,9 +34,12 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
 }
 
 // GET: Get single service details
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
     try {
-        const { id } = params;
+        const { id } = await params;
         const service = await prisma.service.findUnique({
             where: { id },
         });
@@ -52,14 +55,17 @@ export async function GET(request: Request, { params }: { params: { id: string }
 }
 
 // PUT: Update service
-export async function PUT(request: Request, { params }: { params: { id: string } }) {
+export async function PUT(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
     const session = await getServerSession(authOptions as any);
     if (!session || !["ADMIN", "EDITOR"].includes(session.user.role)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
     try {
-        const { id } = params;
+        const { id } = await params;
         const body = await request.json();
 
         const updatedService = await prisma.service.update({

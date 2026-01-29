@@ -6,9 +6,12 @@ import { authOptions } from "@/lib/auth";
 const prisma = new PrismaClient();
 
 // GET: Get single post
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
     try {
-        const { id } = params;
+        const { id } = await params;
         const post = await prisma.post.findUnique({
             where: { id },
             include: {
@@ -29,14 +32,17 @@ export async function GET(request: Request, { params }: { params: { id: string }
 }
 
 // PUT: Update post
-export async function PUT(request: Request, { params }: { params: { id: string } }) {
+export async function PUT(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
     const session = await getServerSession(authOptions as any);
     if (!session || !["ADMIN", "EDITOR", "MARKETING"].includes(session.user.role)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
     try {
-        const { id } = params;
+        const { id } = await params;
         const body = await request.json();
 
         const updatedPost = await prisma.post.update({
@@ -51,14 +57,17 @@ export async function PUT(request: Request, { params }: { params: { id: string }
 }
 
 // DELETE: Delete post
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+export async function DELETE(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
     const session = await getServerSession(authOptions as any);
     if (!session || !["ADMIN"].includes(session.user.role)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
     try {
-        const { id } = params;
+        const { id } = await params;
         await prisma.post.delete({
             where: { id },
         });
