@@ -1,0 +1,383 @@
+{
+    "meta": {
+        "generated_at": "2026-01-25",
+        "description": "Unified database file for MEDITECH website"
+    },
+    "doctors": [
+        {
+            "id": "dr-dung",
+            "name": "BS. Tuệ Linh",
+            "role": "Giám đốc chuyên môn",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q",
+            "qualifications": [
+                "Tiến sĩ Y khoa - Đại học Y Hà Nội",
+                "Tu nghiệp Phẫu thuật Tạo hình tại Bệnh viện Foch (Pháp)"
+            ],
+            "certificates": [
+                "Chứng chỉ hành nghề khám chữa bệnh chuyên khoa PTTM",
+                "Thành viên Hội Phẫu thuật Tạo hình Thẩm mỹ Quốc tế (ISAPS)"
+            ],
+            "experience": 20,
+            "specialty": "all",
+            "description": "Chuyên gia hàng đầu về Phẫu thuật Tạo hình với tư duy thẩm mỹ tinh tế và đôi bàn tay vàng."
+        },
+        {
+            "id": "dr-hoang",
+            "name": "BS. Trần Hoàng",
+            "role": "Trưởng khoa Tiểu phẫu",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg",
+            "qualifications": [
+                "Thạc sĩ Bác sĩ Nội trú - Đại học Y Dược TP.HCM"
+            ],
+            "certificates": [
+                "Chứng chỉ Laser thẩm mỹ",
+                "Chứng chỉ Tiêm chất làm đầy (Filler/Botox)"
+            ],
+            "experience": 12,
+            "specialty": "tieu-phau",
+            "description": "Chuyên sâu về các thủ thuật tiểu phẫu vùng mặt, mang lại vẻ đẹp tự nhiên hài hòa."
+        },
+        {
+            "id": "dr-lan-anh",
+            "name": "BS. Vũ Lan Anh",
+            "role": "Bác sĩ Da liễu & Nội khoa",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBT0y2Pb0pw0Zzb5RQzdUirmvXQ5YjcNmiczeoiP9zQJ5KncrCMsoxmu0W9nqQLqWErNuh2U8u9oehiS_DHSkIGsv3p3OenHDZqvn_5FVSo0-FBygfgcNAxOY7qmyPohIjZnWrB6lmnzWrxnlyagcC3F0ZcVuuTNcJt_96mhd65If8Vz-rwXUjQZfUobcrHJVNKkeBfc3mZNtbE4cufCVyQv4HvytBx7hduDV6Myqw66-2EC5rk3r0EFWbkuQ7899r-sE_ahZsZHA",
+            "qualifications": [
+                "Bác sĩ Chuyên khoa I Da liễu"
+            ],
+            "certificates": [
+                "Chứng chỉ Ứng dụng Laser và Ánh sáng trong Da liễu",
+                "Chứng chỉ Căng chỉ thẩm mỹ"
+            ],
+            "experience": 10,
+            "specialty": "da-lieu",
+            "description": "Tận tâm và tỉ mỉ trong từng liệu trình chăm sóc, điều trị da công nghệ cao."
+        },
+        {
+            "id": "dr-a",
+            "name": "ThS. BS. Nguyễn Văn A",
+            "role": "Trưởng khoa Da liễu",
+            "specialty": "Chuyên gia Da liễu & Laser Thẩm mỹ",
+            "experience": "15 năm kinh nghiệm",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDifydABd6Sm3BuycinN2xhUwD7oorMuxQyiIArw7NXIIXhZlvb91DYPZ_fEEFVjvA_OmcEfhgqW82NJ3G3wrlkL5RccdCdvv-DZkL2uEqwRQ14JlPoexNZSRLTu23-MJ7LVB5g1eumQiJamX-jxedpnsmT1YoyX-YCQDMh8by-kMHNM8E3Xkr707W9yTo_SaGPvBAjf5imlz4dOlHcWOYdTmXaMRWczIhDt_bAfVOTwCZvRm9flvty2nryBTiaDpaSzMpm4qi8YA",
+            "qualifications": []
+        },
+        {
+            "id": "dr-b",
+            "name": "BS. CKII. Trần Thị B",
+            "role": "Chuyên gia Trẻ hóa",
+            "specialty": "Nâng cơ & Trẻ hóa công nghệ cao",
+            "experience": "20 năm kinh nghiệm",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDe8NW9ZtesZOFQxS2g1DJq4y0zwZuqnNKa9T_-qVmLp9_QgdW5tirwmzoFr6_J5MVc--Kiu-KNyTFENW0xePriDHQOIcD-FRHNw3keb7COcGI5VTKV_OqG03F3vVK1JhR2OuZfLGYDges7olCsNWQ04rjmbbxVioJxmMdU4mMy28FyoehytwuVjaWDR0dd5mG4xWTfe0cdmDM-WrieOT-_dHv3ncWje1sGcLmnM83Q9fTeewGSQph4SCtxJhOj4VsbVvixDH9vBg",
+            "qualifications": []
+        },
+        {
+            "id": "dr-c",
+            "name": "BS. Lê Hoàng C",
+            "role": "Thẩm mỹ ngoại khoa",
+            "specialty": "Phẫu thuật tạo hình thẩm mỹ",
+            "experience": "12 năm kinh nghiệm",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBMH1jaSop956a-z2I46g20q08I76Of5gacuArNR-sXQM87oBzH2m0ya6VnA7-9J7bgGPh5PZ13Ps2i8uB3pasmvy3xUihi7zU2VXDJc4hsJUYxMbs5E1JGYmHGCaAehOqBYpD-CfjxWDvxohtXdGdeJLyBg6DH3b68AZJ0Hm0vF_wqsZRHhkimWb6-T4MzUV7J85KTSPOCA9ZKJ50z89wA5wp7eProdbe5CoWIpyhG-ncDVie7TuXXecqXfZQoNqxqU8vgXxDxWg",
+            "qualifications": []
+        }
+    ],
+    "services": [
+        {
+            "id": "cat-mi",
+            "name": "Cắt Mí Eye-Lift",
+            "type": "tieu-phau",
+            "category": "Mắt",
+            "shortDesc": "Kiến tạo nếp mí rõ nét, tự nhiên, loại bỏ da dư mỡ thừa giúp đôi mắt to tròn, linh hoạt.",
+            "cost": "8.000.000đ - 15.000.000đ",
+            "recoveryTime": "5 - 7 ngày cắt chỉ."
+        },
+        {
+            "id": "nhan-mi",
+            "name": "Nhấn Mí",
+            "type": "tieu-phau",
+            "category": "Mắt",
+            "shortDesc": "Tạo nếp mí không phẫu thuật, thời gian hồi phục nhanh.",
+            "cost": "5.000.000đ - 8.000.000đ",
+            "recoveryTime": "3 - 5 ngày."
+        },
+        {
+            "id": "lay-mo-mi",
+            "name": "Lấy Mỡ Mí",
+            "type": "tieu-phau",
+            "category": "Mắt",
+            "shortDesc": "Loại bỏ bọng mỡ mắt dưới hoặc trên, trẻ hóa đôi mắt.",
+            "cost": "Cam kết chi phí hợp lý.",
+            "recoveryTime": "5 - 7 ngày."
+        },
+        {
+            "id": "nang-mui-khong-phau-thuat",
+            "name": "Nâng Mũi Không Phẫu Thuật",
+            "type": "tieu-phau",
+            "category": "Mũi",
+            "shortDesc": "Nâng cao sống mũi bằng chỉ hoặc filler, hiệu quả tức thì.",
+            "cost": "Liên hệ.",
+            "recoveryTime": "1 - 2 ngày."
+        },
+        {
+            "id": "tiem-filler-botox",
+            "name": "Tiêm Filler - Botox",
+            "type": "tieu-phau",
+            "category": "Thẩm mỹ nội khoa",
+            "shortDesc": "Làm đầy, xóa nhăn, thon gọn hàm không phẫu thuật.",
+            "cost": "Theo cc.",
+            "recoveryTime": "Ngay lập tức."
+        },
+        {
+            "id": "cay-mo-tu-than",
+            "name": "Cấy Mỡ Tự Thân",
+            "type": "tieu-phau",
+            "category": "Trẻ hóa",
+            "shortDesc": "Làm đầy thái dương, má hóp, rãnh cười bằng mỡ tự thân.",
+            "cost": "Liên hệ.",
+            "recoveryTime": "5 - 7 ngày."
+        },
+        {
+            "id": "thu-gon-moi",
+            "name": "Thu Gọn Môi",
+            "type": "tieu-phau",
+            "category": "Môi",
+            "shortDesc": "Tạo hình môi trái tim, thu mỏng môi dày.",
+            "cost": "Liên hệ.",
+            "recoveryTime": "7 ngày."
+        },
+        {
+            "id": "tri-seo",
+            "name": "Điều Trị Sẹo",
+            "type": "tieu-phau",
+            "category": "Da",
+            "shortDesc": "Xóa sẹo rỗ, sẹo lồi, sẹo xấu bằng công nghệ cao.",
+            "cost": "Liên hệ.",
+            "recoveryTime": "Tùy tình trạng."
+        },
+        {
+            "id": "nang-mui-cau-truc",
+            "name": "Nâng Mũi Cấu Trúc",
+            "type": "dai-phau",
+            "category": "Mũi",
+            "shortDesc": "Tái cấu trúc toàn diện dáng mũi, khắc phục mọi khuyết điểm.",
+            "recoveryTime": "10 ngày cắt chỉ."
+        },
+        {
+            "id": "got-ham-ha-go-ma",
+            "name": "Gọt Hàm - Hạ Gò Má",
+            "type": "dai-phau",
+            "category": "Hàm mặt",
+            "shortDesc": "Tạo mặt V-line thon gọn, hài hòa, hạ gò má cao.",
+            "recoveryTime": "2 - 4 tuần."
+        },
+        {
+            "id": "don-cam",
+            "name": "Độn Cằm V-Line",
+            "type": "dai-phau",
+            "category": "Hàm mặt",
+            "shortDesc": "Khắc phục cằm lẹm, cằm ngắn, tạo dáng cằm V-line.",
+            "recoveryTime": "7 ngày."
+        },
+        {
+            "id": "phau-thuat-ham",
+            "name": "Phẫu Thuật Hàm Hô/Móm",
+            "type": "dai-phau",
+            "category": "Hàm mặt",
+            "shortDesc": "Chỉnh hàm hô, móm, sai khớp cắn.",
+            "recoveryTime": "4 - 6 tuần."
+        },
+        {
+            "id": "nang-nguc",
+            "name": "Nâng Ngực Nội Soi",
+            "type": "dai-phau",
+            "category": "Ngực",
+            "shortDesc": "Vòng 1 căng tròn, quyến rũ với kỹ thuật nội soi an toàn.",
+            "recoveryTime": "1 tháng."
+        },
+        {
+            "id": "hut-mo-tao-hinh",
+            "name": "Hút Mỡ Tạo Hình",
+            "type": "dai-phau",
+            "category": "Body",
+            "shortDesc": "Hút mỡ bụng, đùi, bắp tay, tạo đường cong cơ thể.",
+            "recoveryTime": "3 - 5 ngày."
+        },
+        {
+            "id": "cang-da-mat-co",
+            "name": "Căng Da Mặt / Cổ",
+            "type": "dai-phau",
+            "category": "Trẻ hóa",
+            "shortDesc": "Xóa nhăn, nâng cơ, trẻ hóa 10 tuổi.",
+            "recoveryTime": "2 tuần."
+        },
+        {
+            "id": "tao-hinh-thanh-bung",
+            "name": "Tạo Hình Thành Bụng",
+            "type": "dai-phau",
+            "category": "Body",
+            "shortDesc": "Cắt bỏ da chùng, xử lý sổ cơ bụng sau sinh.",
+            "recoveryTime": "1 tháng."
+        }
+    ],
+    "promotions": [
+        {
+            "id": 1,
+            "title": "Giảm mỡ đón hè với ưu đãi 50% dành riêng cho phác đồ Slim Fit Promax AI",
+            "discount": "50%",
+            "expiry": "31/03/2025"
+        },
+        {
+            "id": 2,
+            "title": "Ưu đãi 50% Phác đồ kiến tạo gương mặt hoàn hảo từ Meditech Premium",
+            "discount": "50%",
+            "expiry": "31/03/2025"
+        },
+        {
+            "id": 3,
+            "title": "Rước vía Thần Tài - Đón lộc Meditech: Ưu đãi đặc biệt duy nhất ngày mùng 10 Tết",
+            "discount": "Hot Deal",
+            "expiry": "Mùng 10 Tết"
+        },
+        {
+            "id": 4,
+            "title": "Ưu đãi lớn nhất năm: Sở hữu vẻ đẹp hoàn mỹ cùng top dịch vụ đẳng cấp",
+            "discount": "9 Suất",
+            "expiry": "Đăng ký ngay"
+        },
+        {
+            "id": 5,
+            "title": "Ưu đãi 68% săn chắc, trẻ hóa body toàn diện với liệu pháp Morpheus8",
+            "discount": "68%",
+            "expiry": "28/02/2025"
+        },
+        {
+            "id": 6,
+            "title": "Ưu đãi 73% căng bóng, trẻ hóa da toàn diện với Meso không kim",
+            "discount": "73%",
+            "expiry": "28/02/2025"
+        }
+    ],
+    "news": [
+        {
+            "id": "1",
+            "title": "Cách chăm sóc da sau liệu trình Laser hiệu quả",
+            "category": "Chăm sóc da",
+            "date": "28 Tháng 11, 2023",
+            "slug": "cach-cham-soc-da-sau-laser"
+        },
+        {
+            "id": "2",
+            "title": "Xu hướng nâng cơ không phẫu thuật năm 2024",
+            "category": "Công nghệ mới",
+            "date": "25 Tháng 11, 2023",
+            "slug": "xu-huong-nang-co-2024"
+        },
+        {
+            "id": "3",
+            "title": "Tại sao trẻ hóa da Multi-layer lại được ưa chuộng?",
+            "category": "Kiến thức thẩm mỹ",
+            "date": "20 Tháng 11, 2023",
+            "slug": "tre-hoa-da-multi-layer"
+        },
+        {
+            "id": "4",
+            "title": "Phân biệt các loại filler trên thị trường hiện nay",
+            "category": "Kiến thức thẩm mỹ",
+            "date": "15 Tháng 11, 2023",
+            "slug": "phan-biet-cac-loai-filler"
+        },
+        {
+            "id": "5",
+            "title": "Bí quyết giữ dáng thon gọn cho dân văn phòng",
+            "category": "Làm đẹp",
+            "date": "10 Tháng 11, 2023",
+            "slug": "bi-quyet-giu-dang"
+        },
+        {
+            "id": "6",
+            "title": "Quy trình chăm sóc da chuẩn y khoa tại nhà",
+            "category": "Chăm sóc da",
+            "date": "05 Tháng 11, 2023",
+            "slug": "cham-soc-da-chuan-y-khoa"
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Chị Minh Anh",
+            "service": "Nâng mũi cấu trúc",
+            "content": "Mình rất sợ đau nhưng bác sĩ làm rất nhẹ nhàng. Sau 1 tháng mũi đã gom form rất đẹp, tự nhiên, ai cũng khen."
+        },
+        {
+            "name": "Bạn Ngọc Diệp",
+            "service": "Cắt mí Eye-lift",
+            "content": "Mắt mình trước đây một mí, nhìn lờ đờ. Giờ cắt xong mắt to tròn, long lanh hơn hẳn. Cảm ơn bác sĩ nhiều lắm!"
+        },
+        {
+            "name": "Cô Thanh Mai",
+            "service": "Căng chỉ Collagen",
+            "content": "Ở tuổi 50 cô không nghĩ mình có thể trẻ lại như thế này. Da căng bóng, nếp nhăn giảm hẳn. Dịch vụ rất chuyên nghiệp."
+        }
+    ],
+    "faqs": [
+        {
+            "id": "safe",
+            "category": "An Toàn Y Khoa",
+            "questions": [
+                {
+                    "q": "Quy trình phẫu thuật có đảm bảo vô trùng không?",
+                    "a": "Toàn bộ quy trình được thực hiện trong phòng mổ áp lực dương vô khuẩn một chiều, đảm bảo tiêu chuẩn khắt khe của Bộ Y tế."
+                },
+                {
+                    "q": "Gây tê/Gây mê có an toàn không?",
+                    "a": "Chúng tôi có ekip bác sĩ gây mê hồi sức chuyên nghiệp, khách hàng được khám sức khỏe tổng quát kỹ lưỡng trước khi thực hiện để loại trừ mọi rủi ro."
+                },
+                {
+                    "q": "Vật liệu sử dụng có nguồn gốc rõ ràng không?",
+                    "a": "100% sụn nâng, túi ngực, filler, botox... đều là hàng chính hãng, có tem mác và check code trực tiếp trước khi sử dụng."
+                }
+            ]
+        },
+        {
+            "id": "recovery",
+            "category": "Hồi Phục & Chăm Sóc",
+            "questions": [
+                {
+                    "q": "Thời gian hồi phục sau phẫu thuật là bao lâu?",
+                    "a": "Tùy dịch vụ: Tiểu phẫu (mắt, mũi) thường 5-7 ngày cắt chỉ. Đại phẫu (ngực, bụng) cần nghỉ dưỡng 1-2 ngày tại viện và hồi phục trong 2-4 tuần."
+                },
+                {
+                    "q": "Cần kiêng khen gì sau phẫu thuật?",
+                    "a": "Cần kiêng đồ nếp, rau muống, thịt bò, hải sản trong 1 tháng đầu. Hạn chế vận động mạnh và tuân thủ lịch uống thuốc của bác sĩ."
+                }
+            ]
+        },
+        {
+            "id": "durability",
+            "category": "Độ Bền Kết Quả",
+            "questions": [
+                {
+                    "q": "Nâng mũi/Nâng ngực có được vĩnh viễn không?",
+                    "a": "Với kỹ thuật can thiệp cấu trúc và vật liệu cao cấp, kết quả có thể duy trì ổn định lâu dài (trên 10-20 năm hoặc vĩnh viễn tùy cơ địa)."
+                },
+                {
+                    "q": "Cắt mí sau này có bị sụp lại không?",
+                    "a": "Cắt mí loại bỏ da dư mỡ thừa triệt để, nếp mí giữ được rất lâu. Tuy nhiên theo lão hóa tự nhiên, da có thể chùng lại sau nhiều năm."
+                }
+            ]
+        },
+        {
+            "id": "warranty",
+            "category": "Bảo Hành & Chỉnh Sửa",
+            "questions": [
+                {
+                    "q": "Chính sách bảo hành của Meditech như thế nào?",
+                    "a": "Chúng tôi bảo hành sụn/vật liệu trọn đời và bảo hành kết quả thẩm mỹ theo từng dịch vụ cụ thể (có thẻ bảo hành rõ ràng)."
+                },
+                {
+                    "q": "Nếu kết quả không ưng ý có được sửa lại không?",
+                    "a": "Nếu lỗi do kỹ thuật hoặc không đúng cam kết ban đầu, Meditech chịu trách nhiệm chỉnh sửa miễn phí cho khách hàng."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+THÔNG TIN KẾT NỐI DATABASE (GỬI CHO MẮT BÃO)
+
+hostname: localhost
+user: [ĐIỀN_USERNAME_CỦA_BẠN_TẠI_ĐÂY]
+database_name: [ĐIỀN_TÊN_DATABASE_TẠI_ĐÂY]
+password: [ĐIỀN_MẬT_KHẨU_TẠI_ĐÂY]
+
+-----------------------------------------------------------
+Ghi chú cho kỹ thuật Mắt Bão:
+Hệ thống sử dụng Prisma ORM. Chuỗi kết nối cần cấu hình trong file .env là:
+
+DATABASE_URL="mysql://[user]:[password]@localhost:3306/[database_name]"
+
+Sau khi điền file này, nhờ kỹ thuật chạy lệnh:
+npx prisma generate
+npx prisma db push
+npm run build
+npm start

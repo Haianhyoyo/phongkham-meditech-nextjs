@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thẩm Mỹ Cơ Thể - Meditec Clinic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0056A4", 
+                        accent: "#D4AF37", 
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 86, 164, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .tech-card {
+            background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+        }
+        .dark .tech-card {
+            background: linear-gradient(to bottom right, #1e293b, #0f172a);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display text-primary tracking-tight">MEDITEC</span>
+</div>
+<div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/TrangChu.html">Trang Chủ</a>
+<a class="text-primary border-b-2 border-primary" href="/website_ThamMy/DichVu.html">Dịch Vụ</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/VeChungToi.html">Về chúng tôi</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/ChuyenGia.html">Chuyên gia</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/KetQua.html">Kết quả</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
+</button>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20" href="#booking">Đăng ký ngay</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative py-40 flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Thẩm mỹ cơ thể" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyKfYe5R7nL12rlD-FR-SD0OMS8iFKl60Ihar2_RXNStVsLTquAw92nYPg9IIT4Ci5959ti3b09PXCdht9nf4AqmL1RKGABqcCL4fDg5EFTdW31WMOnnbZaLGQTbtWy7c_uhbppbBC7dpKWHs_cX-aL7-o3X0DZK5tLXCBsB7l6lo8sRE_jZtGlVvT3EFRA3iGlvMjE5XJPrYZYfILJR5GMbsJtv_SUJOmiBF1uLeNz-pS3Imlmnj1KzTMW0Cyl_62VsCb_aj3vA"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h1 class="text-5xl md:text-7xl font-display font-bold mb-6">Thẩm Mỹ Cơ Thể<br/><span class="text-accent italic">Kiến Tạo Đường Cong</span></h1>
+<p class="text-xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+            Sở hữu vóc dáng thon gọn, săn chắc với các công nghệ hút mỡ và tạo hình cơ thể mini hiện đại nhất.
+        </p>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Danh mục dịch vụ</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Kiến Tạo Vóc Dáng Hoàn Hảo</h3>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-64 overflow-hidden">
+<img alt="Hút mỡ mini vùng nhỏ" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/Gemini_Generated_Image_kreihkkreihkkrei.png"/>
+<div class="absolute top-4 left-4 bg-primary/90 backdrop-blur px-4 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-wider">Body Contouring</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Hút mỡ mini vùng nhỏ</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">
+                        Loại bỏ mỡ thừa tại các vùng khó giảm như nọng cằm, bắp tay, bắp chân bằng kỹ thuật ít xâm lấn.
+                    </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<div class="text-accent font-bold">Giá từ: 15.000.000đ</div>
+<a class="flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all text-xs" href="#">
+                            XEM CHI TIẾT <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-64 overflow-hidden">
+<img alt="Lấy mỡ tạo hình vùng nhỏ" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/Gemini_Generated_Image_xfnk8dxfnk8dxfnk.png"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Lấy mỡ tạo hình vùng nhỏ</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">
+                        Kết hợp hút mỡ và tái cấu trúc mô mỡ để làm đầy các vùng lõm, mang lại đường cong mượt mà.
+                    </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<div class="text-accent font-bold">Giá từ: 20.000.000đ</div>
+<a class="flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all text-xs" href="#">
+                            XEM CHI TIẾT <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-64 overflow-hidden">
+<img alt="Căng da bụng mini" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/Gemini_Generated_Image_aizqzaizqzaizqza.png"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Căng da bụng mini</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">
+                        Loại bỏ phần da chùng nhão phía dưới rốn cho phụ nữ sau sinh hoặc người giảm cân đột ngột.
+                    </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<div class="text-accent font-bold">Giá từ: 30.000.000đ</div>
+<a class="flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all text-xs" href="#">
+                            XEM CHI TIẾT <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-64 overflow-hidden">
+<img alt="Lấy mỡ nách" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/Gemini_Generated_Image_ivtcieivtcieivtc.png"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Lấy mỡ nách</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">
+                        Giải quyết triệt để tình trạng mỡ thừa vùng nách, giúp phái đẹp tự tin diện trang phục gợi cảm.
+                    </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<div class="text-accent font-bold">Giá từ: 10.000.000đ</div>
+<a class="flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all text-xs" href="#">
+                            XEM CHI TIẾT <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-64 overflow-hidden">
+<img alt="Tạo hình quầng - núm vú" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/Gemini_Generated_Image_xvwcfxvwcfxvwcfx.png"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Tạo hình quầng - núm vú</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">
+                        Phẫu thuật tinh tế giúp khôi phục vẻ đẹp thẩm mỹ, cân đối và tự nhiên cho vòng 1.
+                    </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<div class="text-accent font-bold">Giá từ: 12.000.000đ</div>
+<a class="flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all text-xs" href="#">
+                            XEM CHI TIẾT <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<img alt="SlimLipo Vaser Technology" class="relative rounded-3xl shadow-2xl z-10 w-full object-cover" src="/website_ThamMy/image/Gemini_Generated_Image_1maxji1maxji1max.png"/>
+<div class="absolute -bottom-6 -right-6 bg-accent p-6 rounded-2xl shadow-xl z-20 text-white font-bold">
+<p class="text-sm uppercase tracking-widest mb-1">Công nghệ độc quyền</p>
+<p class="text-2xl">SlimLipo Vaser</p>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Công nghệ dẫn đầu</h2>
+<h3 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight">Đỉnh Cao Tạo Hình <br/> Không Để Lại Sẹo</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                    Tại Meditec, chúng tôi ứng dụng công nghệ <strong>SlimLipo Vaser</strong> thế hệ mới - tiêu chuẩn vàng trong lĩnh vực hút mỡ không phẫu thuật từ Hoa Kỳ.
+                </p>
+<div class="grid gap-6">
+<div class="flex gap-4 p-6 tech-card rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl">flare</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">Loại bỏ mỡ nhẹ nhàng</h4>
+<p class="text-sm text-slate-500">Sóng siêu âm hội tụ chỉ tác động vào mô mỡ, không gây tổn thương mạch máu hay thần kinh.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 tech-card rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl">auto_fix_high</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">Tạo hình không sẹo</h4>
+<p class="text-sm text-slate-500">Kỹ thuật điểm chích siêu nhỏ, ẩn giấu tại các nếp gấp tự nhiên, không để lại dấu vết thẩm mỹ.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Minh chứng thực tế</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Kết Quả Khách Hàng</h3>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:underline" href="#">Xem thêm album <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="group relative rounded-3xl overflow-hidden shadow-lg aspect-[16/10]">
+<img alt="Hút mỡ bụng kết quả" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/website_ThamMy/image/Gemini_Generated_Image_md1rcnmd1rcnmd1r.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-8">
+<div class="text-white">
+<p class="text-accent font-bold mb-1 uppercase text-xs tracking-widest">Hút mỡ bụng &amp; Eo</p>
+<h4 class="text-xl font-display">Thay đổi ngoạn mục sau 30 ngày</h4>
+</div>
+</div>
+</div>
+<div class="group relative rounded-3xl overflow-hidden shadow-lg aspect-[16/10]">
+<img alt="Căng da bụng kết quả" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/website_ThamMy/image/Gemini_Generated_Image_2mamfl2mamfl2mam.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-8">
+<div class="text-white">
+<p class="text-accent font-bold mb-1 uppercase text-xs tracking-widest">Căng da bụng mini</p>
+<h4 class="text-xl font-display">Phục hồi cơ bụng săn chắc cho mẹ bỉm</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative" id="booking">
+<div class="absolute inset-0">
+<img alt="Tư vấn vóc dáng" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q"/>
+<div class="absolute inset-0 bg-primary/95 backdrop-blur-sm"></div>
+</div>
+<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Tư vấn kiến tạo vóc dáng cùng chuyên gia</h2>
+<p class="text-lg opacity-90 mb-10 max-w-xl mx-auto font-light leading-relaxed">
+            Nhận phác đồ định hình cơ thể chuyên biệt từ bác sĩ trưởng khoa. Đăng ký ngay để nhận ưu đãi lên đến 30%.
+        </p>
+<form class="bg-white/10 backdrop-blur-xl p-3 rounded-full max-w-2xl mx-auto flex flex-col md:flex-row gap-3 border border-white/20">
+<input class="flex-1 bg-white/95 text-slate-900 px-8 py-4 rounded-full border-0 focus:ring-2 focus:ring-accent placeholder:text-slate-400" placeholder="Số điện thoại của bạn" required="" type="tel"/>
+<button class="bg-accent text-white px-10 py-4 rounded-full font-bold hover:bg-yellow-600 transition-all uppercase tracking-[0.15em] shadow-lg text-sm whitespace-nowrap">ĐĂNG KÝ NGAY</button>
+</form>
+</div>
+</section>
+<footer class="bg-[#002B54] pt-20 pb-10 text-white relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display tracking-tight text-white">MEDITEC</span>
+</div>
+<p class="text-white/60 text-sm leading-relaxed">
+                    Hệ thống thẩm mỹ y khoa đạt chuẩn quốc tế, dẫn đầu về công nghệ phẫu thuật thẩm mỹ an toàn và chuyên sâu tại Việt Nam.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Thẩm Mỹ Cơ Thể
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent transition-colors" href="#">Hút mỡ Mini</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Căng da bụng</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Tạo hình quầng vú</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Lấy mỡ nách</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Thông tin liên hệ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">location_on</span> 123 Đường Luxury, Quận 1, TP. HCM</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">phone</span> (088) 989 5555</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">mail</span> body@meditec.vn</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Giờ phục vụ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-3 text-white/60 text-sm">
+<li class="flex justify-between"><span>Thứ 2 - Thứ 6:</span> <span class="text-white">08:00 - 20:00</span></li>
+<li class="flex justify-between"><span>Thứ 7:</span> <span class="text-white">08:30 - 21:00</span></li>
+<li class="flex justify-between"><span>Chủ nhật:</span> <span class="text-white">08:30 - 18:00</span></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-white/40 text-xs">
+                © 2024 Thẩm Mỹ Viện Meditec - Chuyên khoa Thẩm Mỹ Cơ Thể.
+            </div>
+<div class="flex gap-8 text-white/40 text-xs">
+<a class="hover:text-white" href="#">Chính sách bảo mật</a>
+<a class="hover:text-white" href="#">Điều khoản sử dụng</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

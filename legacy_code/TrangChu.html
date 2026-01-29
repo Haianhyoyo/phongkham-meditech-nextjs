@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trang Chủ Thẩm Mỹ Viện Meditec</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0056A4", 
+                        accent: "#D4AF37", 
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+        }
+        .dark .hero-gradient {
+            background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.85) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display text-primary tracking-tight">MEDITECH</span>
+</div>
+<div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+<a class="text-primary border-b-2 border-primary" href="/website_ThamMy/TrangChu.html">Trang Chủ</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/DichVu.html">Dịch vụ</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/VeChungToi.html">Về chúng tôi</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/ChuyenGia.html">Chuyên gia</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/KetQua.html">Kết quả</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
+</button>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20" href="#booking">Đăng ký ngay</a>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Phòng khám Meditec" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">
+<span class="material-symbols-outlined text-sm">verified</span>
+                Hệ Thống Thẩm Mỹ Y Khoa Hàng Đầu Việt Nam
+            </div>
+<h1 class="text-5xl lg:text-7xl font-display font-bold text-slate-900 dark:text-white leading-tight">
+                Giải pháp <br/> <span class="text-primary italic">thẩm mỹ công nghệ cao</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+                Kết hợp chuyên môn y khoa quốc tế và công nghệ tiên tiến từ Pháp nhằm tái định nghĩa sự hoàn mỹ. Trải nghiệm liệu trình làm đẹp cá nhân hóa cho vẻ đẹp độc bản của bạn.
+            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-700 transition-all flex items-center gap-2" href="#booking">
+                    Đăng ký tư vấn ngay <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-4">
+<img alt="Bác sĩ 1" class="w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiGC1D_KZ3KWaC4cX8FzwsBfIaAwkKvIO2UmQxXKsPIggkoMtCqEDD4JrgHhPnfy2WzrKvw9DxboBpNHceKoqMKJ1YVMoXVbaokMsL-uNmn4bHbgE8Y87Xx9qLwoH1Rg9GAuBMeZLoTzMIAgrB3HRnCC_YGh5cUSO0X0rP82anBoF_fmn3W30YFakw6YttLcYngSxoNO6cLsV_b780aOcBjbOJG65Nl5zqWpedq7hEOXZ9v4k-WLtZx_Oi-jlO0gEhDnW5pWPJJQ"/>
+<img alt="Bác sĩ 2" class="w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5kLTt72xDKPfKm6DfSN2p2Ad1vD_Z4UQniZ3bHcDGS9FTA2jhMYvboRe8PxvhA-KL2CQBggKzplg5Kkc-6d9nYM4wUlEH7xeC3B6HcpImLPgt0gA-DVxwQHGwK-wwSI-HEhKj57bqRF-UZGrBPnfugEWqUoh-Yr9y-BhOVeEBgiDvFaF5TP_zU7DLI0FQltuLpEjDWOF9Ndp4tCXx0U2SDzNmWSfetCLY9rumrB5HwIwnN-EqmgV1pLOLVFqNW_l4n96jaY_48A"/>
+<div class="w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 bg-accent text-white flex items-center justify-center text-xs font-bold">+15</div>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400">Đội ngũ bác sĩ chuyên gia</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:block">
+<img alt="Dịch vụ Meditec" class="rounded-[2rem] shadow-2xl border-8 border-white dark:border-slate-800" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyKfYe5R7nL12rlD-FR-SD0OMS8iFKl60Ihar2_RXNStVsLTquAw92nYPg9IIT4Ci5959ti3b09PXCdht9nf4AqmL1RKGABqcCL4fDg5EFTdW31WMOnnbZaLGQTbtWy7c_uhbppbBC7dpKWHs_cX-aL7-o3X0DZK5tLXCBsB7l6lo8sRE_jZtGlVvT3EFRA3iGlvMjE5XJPrYZYfILJR5GMbsJtv_SUJOmiBF1uLeNz-pS3Imlmnj1KzTMW0Cyl_62VsCb_aj3vA"/>
+</div>
+</div>
+</header>
+<section class="py-24 bg-white dark:bg-slate-900" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Dịch vụ nổi bật</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Liệu Trình Chuyên Sâu</h3>
+<div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="group bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<div class="relative h-48 overflow-hidden">
+<img alt="Trị nám" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/website_ThamMy/image/dr-laser-pico-5.0-1.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Trị nám chuyên sâu</h4>
+<p class="text-slate-600 dark:text-slate-400 mb-4 text-xs leading-relaxed">Công nghệ Laser tân tiến loại bỏ sắc tố melanin tận gốc, trả lại làn da đều màu.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+<div class="group bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<div class="relative h-48 overflow-hidden">
+<img alt="Trẻ hóa da" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/website_ThamMy/image/tre-hoa-da-mat.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Trẻ hóa da Multi-layer</h4>
+<p class="text-slate-600 dark:text-slate-400 mb-4 text-xs leading-relaxed">Kích thích tăng sinh collagen tự thân, xóa mờ nếp nhăn và phục hồi độ đàn hồi.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+<div class="group bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<div class="relative h-48 overflow-hidden">
+<img alt="Nâng cơ Hifu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/website_ThamMy/image/4CXvP1qv-356192-sieu-nang-co-va-tre-hoa-da-cong-nghe-hifu-pro-duy-nhat-1-lan-120-phut-cam-ket-hieu-qua-100-tai-tham-my-vien-au-viet.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Nâng cơ Hifu Pro</h4>
+<p class="text-slate-600 dark:text-slate-400 mb-4 text-xs leading-relaxed">Sử dụng sóng siêu âm hội tụ cường độ cao giúp thon gọn gương mặt không phẫu thuật.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+<div class="group bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<div class="relative h-48 overflow-hidden">
+<img alt="Điều trị mụn" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/website_ThamMy/image/R.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Điều trị mụn y khoa</h4>
+<p class="text-slate-600 dark:text-slate-400 mb-4 text-xs leading-relaxed">Phác đồ chuẩn y khoa kết hợp ánh sáng sinh học giúp sạch mụn và ngăn ngừa thâm sẹo.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<img alt="Đội ngũ Meditec" class="rounded-3xl shadow-2xl" src="/website_ThamMy/image/Gemini_Generated_Image_80gwom80gwom80gw.png"/>
+<div class="absolute -bottom-10 -right-10 bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl hidden md:block border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">workspace_premium</span>
+<div>
+<div class="text-2xl font-bold text-slate-900 dark:text-white">15+ Năm</div>
+<div class="text-slate-500 text-sm">Kinh Nghiệm Y Khoa</div>
+</div>
+</div>
+<div class="text-sm text-slate-600 dark:text-slate-400">Được vinh danh Phòng khám Thẩm mỹ <br/> Xuất sắc nhất năm 2023.</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm">Về chúng tôi</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Tiêu Chuẩn Mới Trong Thẩm Mỹ Y Khoa</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                    Meditec là điểm đến thẩm mỹ đẳng cấp quốc tế, nơi y khoa giao thoa cùng nghệ thuật. Được sáng lập bởi những chuyên gia đầu ngành về da liễu và phẫu thuật thẩm mỹ, chúng tôi chuyên sâu vào các liệu trình không xâm lấn mang lại vẻ đẹp tự nhiên nhất.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span class="font-semibold">Công nghệ &amp; Thiết bị đạt chứng nhận Châu Âu</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span class="font-semibold">Đội ngũ bác sĩ tu nghiệp tại nước ngoài</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span class="font-semibold">Không gian điều trị riêng tư &amp; Sang trọng</span>
+</li>
+</ul>
+<button class="bg-primary text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition-all">Tìm hiểu thêm về cơ sở vật chất</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900 overflow-hidden" id="results">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Kết quả khách hàng</h2>
+<p class="text-slate-600 dark:text-slate-400">Đồng hành cùng hơn 10,000 khách hàng tìm lại sự tự tin và vẻ đẹp rạng rỡ</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<img alt="Khách hàng 1" class="rounded-2xl h-80 w-full object-cover" src="/website_ThamMy/image/594685847_122243953076248364_4104872537926630032_n.jpg"/>
+<div class="space-y-4">
+<img alt="Khách hàng 2" class="rounded-2xl h-[calc(50%-0.5rem)] w-full object-cover" src="/website_ThamMy/image/2.jpg"/>
+<img alt="Khách hàng 3" class="rounded-2xl h-[calc(50%-0.5rem)] w-full object-cover" src="/website_ThamMy/image/595116797_122243952962248364_329157565639851819_n.jpg"/>
+</div>
+<img alt="Khách hàng 4" class="rounded-2xl h-80 w-full object-cover mt-8" src="/website_ThamMy/image/3.jpg"/>
+<div class="space-y-4">
+<img alt="Khách hàng 5" class="rounded-2xl h-36 w-full object-cover" src="/website_ThamMy/image/7.jpg"/>
+<img alt="Khách hàng 6" class="rounded-2xl h-[calc(100%-10rem)] w-full object-cover" src="/website_ThamMy/image/6.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-800" id="doctors">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-end mb-16">
+<div class="space-y-4">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm">Chuyên gia của chúng tôi</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Đội ngũ Bác sĩ Đầu ngành</h3>
+</div>
+<div class="flex gap-2">
+<button class="p-3 rounded-full bg-white dark:bg-slate-700 shadow-md hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">west</span></button>
+<button class="p-3 rounded-full bg-white dark:bg-slate-700 shadow-md hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">east</span></button>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<img alt="BS. Nguyễn Tiến Dũng" class="w-full h-80 object-cover rounded-2xl mb-6" src="/website_ThamMy/image/bacsi.jpg"/>
+<div class="space-y-2">
+<div class="text-primary font-bold text-sm uppercase">Giám đốc chuyên môn</div>
+<h4 class="text-2xl font-display font-bold text-slate-900 dark:text-white">BS. Nguyễn Tiến Dũng</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Chuyên gia Phẫu thuật Tạo hình với hơn 20 năm kinh nghiệm tại Paris và Việt Nam.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<img alt="BS. Trần Hoàng" class="w-full h-80 object-cover rounded-2xl mb-6" src="/website_ThamMy/image/Gemini_Generated_Image_iwq7ukiwq7ukiwq7.png"/>
+<div class="space-y-2">
+<div class="text-primary font-bold text-sm uppercase">Bác sĩ Da liễu Cao cấp</div>
+<h4 class="text-2xl font-display font-bold text-slate-900 dark:text-white">BS. Trần Hoàng</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Chuyên gia laser thẩm mỹ và các kỹ thuật trẻ hóa gương mặt không xâm lấn.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<img alt="BS. Vũ Lan Anh" class="w-full h-80 object-cover rounded-2xl mb-6" src="/website_ThamMy/image/unnamed (22).jpg"/>
+<div class="space-y-2">
+<div class="text-primary font-bold text-sm uppercase">Bác sĩ Thẩm mỹ Nội khoa</div>
+<h4 class="text-2xl font-display font-bold text-slate-900 dark:text-white">BS. Vũ Lan Anh</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Tiên phong trong các liệu pháp tiêm filler/botox và phục hồi tế bào da.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative" id="booking">
+<div class="absolute inset-0">
+<img alt="Tư vấn khách hàng" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q"/>
+<div class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+</div>
+<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-10 md:p-16 shadow-2xl">
+<div class="text-center mb-10 space-y-4">
+<span class="bg-accent/10 text-accent px-4 py-1 rounded-full text-xs font-bold uppercase">Ưu đãi đặc biệt</span>
+<h3 class="text-3xl font-display font-bold text-slate-900 dark:text-white">Đăng ký tư vấn ngay</h3>
+<p class="text-slate-600 dark:text-slate-400">Tặng ngay gói soi da 3D và tư vấn phác đồ điều trị miễn phí</p>
+</div>
+<form class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Họ và tên</label>
+<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" placeholder="Nhập tên của bạn" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Số điện thoại</label>
+<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3" placeholder="Số điện thoại liên hệ" type="tel"/>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Dịch vụ quan tâm</label>
+<select class="w-full rounded-xl border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary px-4 py-3">
+<option>Trị nám / Tàn nhang</option>
+<option>Trẻ hóa da</option>
+<option>Nâng cơ Hifu</option>
+<option>Điều trị mụn</option>
+<option>Dịch vụ khác</option>
+</select>
+</div>
+<button class="md:col-span-2 bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/20 uppercase tracking-widest mt-4">
+                    Gửi yêu cầu tư vấn
+                </button>
+</form>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12 border-l-4 border-primary pl-6">Tin tức &amp; Kiến thức Thẩm mỹ</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex gap-4 group cursor-pointer">
+<img alt="Tin tức 1" class="w-24 h-24 rounded-2xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT0y2Pb0pw0Zzb5RQzdUirmvXQ5YjcNmiczeoiP9zQJ5KncrCMsoxmu0W9nqQLqWErNuh2U8u9oehiS_DHSkIGsv3p3OenHDZqvn_5FVSo0-FBygfgcNAxOY7qmyPohIjZnWrB6lmnzWrxnlyagcC3F0ZcVuuTNcJt_96mhd65If8Vz-rwXUjQZfUobcrHJVNKkeBfc3mZNtbE4cufCVyQv4HvytBx7hduDV6Myqw66-2EC5rk3r0EFWbkuQ7899r-sE_ahZsZHA"/>
+<div>
+<div class="text-xs text-slate-400 mb-1">28 Tháng 11, 2023</div>
+<h4 class="font-bold text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition-colors">Cách chăm sóc da sau liệu trình Laser hiệu quả</h4>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<img alt="Tin tức 2" class="w-24 h-24 rounded-2xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv009JdO-ATSadqYbboaEt8Mh_5nN1x8y8kGMs0mBcVpj6okpzQvMb49diZozphQZ9JcNsOQmJXv_n9Ej2N0C7V9wdyo1ENM3AfGCGzbg6ZidDiVGNdUnMJY8b2vNTM8B-6GoL5r877HImL_pO9XK9JHBGH1YxdAecAqujqJM9289kELLswb0QnFDShH7bF_9_7D54q8LzRnt7GRNLkCMJfAjzB3eA0y7THZQnabNDk-sSz0WLId3kSQyeZinz_5-I1H5ISoEZTw"/>
+<div>
+<div class="text-xs text-slate-400 mb-1">25 Tháng 11, 2023</div>
+<h4 class="font-bold text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition-colors">Xu hướng nâng cơ không phẫu thuật năm 2024</h4>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<img alt="Tin tức 3" class="w-24 h-24 rounded-2xl object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMLSveAcKu95wXQGIhg3RMLhRR4r1P4pPSKGjBU1PYTM5E-DhkMRmcurl3syAla5Bn7fUSuqPmgnroZ3AZomKa4TyONg0pJe_1QDbDLkG0TdmsOfxKbCR6MvLhf_7XRmYm6rZS00IqPygMYtRdc6qHcOlct7c__W5l90rH17GbBd-5rHPrBFHVSZ-FRPnXVM6O0q-AR47NqDWyfxtTRDOsPYLusoAFU457N7Q4qjc6QIxycKtqB3VMKuRttj982g2zW-Vd6_IyXw"/>
+<div>
+<div class="text-xs text-slate-400 mb-1">20 Tháng 11, 2023</div>
+<h4 class="font-bold text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition-colors">Tại sao trẻ hóa da Multi-layer lại được ưa chuộng?</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-primary pt-20 pb-10 text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none translate-x-1/4 -translate-y-1/4">
+<span class="material-symbols-outlined text-[40rem]">medical_services</span>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display tracking-tight">MEDITEC</span>
+</div>
+<p class="text-white/70 text-sm leading-relaxed">
+                    Tái định nghĩa vẻ đẹp thông qua sự chính xác của y khoa. Chúng tôi mang đến những tiêu chuẩn chăm sóc thẩm mỹ cao cấp nhất.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" href="#"><span class="material-symbols-outlined text-xl">play_circle</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Liên kết nhanh</h5>
+<ul class="space-y-4 text-white/70">
+<li><a class="hover:text-white transition-colors" href="#">Chuyên gia của chúng tôi</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Danh mục dịch vụ</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Phản hồi khách hàng</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Chương trình ưu đãi</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Thông tin liên hệ</h5>
+<ul class="space-y-4 text-white/70">
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent">location_on</span> 123 Đường Luxury, Quận 1, TP. HCM</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent">phone</span> (088) 989 5555</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent">mail</span> contact@meditec.vn</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-6">Bản đồ</h5>
+<div class="w-full h-40 bg-white/10 rounded-xl overflow-hidden grayscale contrast-125 opacity-70 hover:opacity-100 transition-opacity">
+<div class="w-full h-full flex items-center justify-center border border-white/20">
+<span class="material-symbols-outlined text-4xl">map</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center text-white/40 text-xs">
+            © 2024 Thẩm Mỹ Viện Meditec. Tất cả các quyền được bảo hộ.
+        </div>
+</div>
+</footer>
+</body></html>

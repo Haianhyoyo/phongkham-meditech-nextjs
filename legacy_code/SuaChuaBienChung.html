@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sửa Chữa &amp; Xử Lý Biến Chứng Thẩm Mỹ - Meditec Clinic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0056A4",
+                        accent: "#D4AF37",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 86, 164, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+        .service-card:hover .service-icon-box {
+            background-color: #D4AF37;
+            color: white;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display text-primary tracking-tight">MEDITEC</span>
+</div>
+<div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/TrangChu.html">Trang Chủ</a>
+<a class="text-primary border-b-2 border-primary" href="/website_ThamMy/DichVu.html">Dịch Vụ</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/VeChungToi.html">Về chúng tôi</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/ChuyenGia.html">Chuyên gia</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/KetQua.html">Kết quả</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
+</button>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20" href="#booking">Đặt lịch khám</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative py-32 flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Sửa chữa biến chứng thẩm mỹ Meditec" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h1 class="text-5xl md:text-7xl font-display font-bold mb-6">Sửa Chữa &amp; Xử Lý Biến Chứng Thẩm Mỹ</h1>
+<p class="text-xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+            Chuyên gia Meditec đồng hành cùng bạn khắc phục những kết quả thẩm mỹ không như ý, tái tạo vẻ đẹp tự nhiên và an toàn.
+        </p>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Danh mục điều trị</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Giải Pháp Khắc Phục Chuyên Sâu</h3>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="service-icon-box w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transition-all duration-300 mb-8">
+<span class="material-symbols-outlined text-3xl">visibility</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Sửa mí hỏng</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-sm leading-relaxed">
+                    Khắc phục tình trạng mí trợn, mí không đều, sẹo xấu hoặc mất nếp mí sau phẫu thuật lỗi bằng kỹ thuật vi phẫu.
+                </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<span class="text-accent font-bold text-sm">Chẩn đoán chuyên sâu</span>
+<a class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all text-sm" href="#">
+                        Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="service-icon-box w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transition-all duration-300 mb-8">
+<span class="material-symbols-outlined text-3xl">medication</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Sửa mũi hỏng nhẹ</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-sm leading-relaxed">
+                    Điều chỉnh sống mũi lệch, lộ sóng hoặc đầu mũi bóng đỏ giúp dáng mũi cân đối, hài hòa với khuôn mặt.
+                </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<span class="text-accent font-bold text-sm">Tái cấu trúc an toàn</span>
+<a class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all text-sm" href="#">
+                        Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="service-icon-box w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transition-all duration-300 mb-8">
+<span class="material-symbols-outlined text-3xl">layers_clear</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Lấy chỉ thẩm mỹ hỏng</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-sm leading-relaxed">
+                    Xử lý tình trạng lộ chỉ, viêm nhiễm hoặc chỉ không tan gây xơ cứng dưới da bằng công nghệ bóc tách nhẹ nhàng.
+                </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<span class="text-accent font-bold text-sm">Quy trình vô trùng</span>
+<a class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all text-sm" href="#">
+                        Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="service-icon-box w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transition-all duration-300 mb-8">
+<span class="material-symbols-outlined text-3xl">vaccines</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Lấy filler vón cục</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-sm leading-relaxed">
+                    Giải quyết triệt để tình trạng vón cục, tràn filler hoặc filler kém chất lượng bằng tiêm tan hoặc tiểu phẫu lấy bỏ.
+                </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<span class="text-accent font-bold text-sm">Hiệu quả tức thì</span>
+<a class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all text-sm" href="#">
+                        Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="service-icon-box w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary transition-all duration-300 mb-8">
+<span class="material-symbols-outlined text-3xl">healing</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Chỉnh sửa sẹo</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8 text-sm leading-relaxed">
+                    Làm mờ sẹo lồi, sẹo thâm, sẹo co kéo sau phẫu thuật thẩm mỹ lỗi, trả lại bề mặt da mịn màng tự nhiên.
+                </p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-700">
+<span class="text-accent font-bold text-sm">Phục hồi cấu trúc da</span>
+<a class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all text-sm" href="#">
+                        Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Cam Kết Chất Lượng</h2>
+<h3 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight">Y Khoa Chuyên Sâu - Kết Quả Bền Vững</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed italic border-l-4 border-accent pl-6">
+                    "Tại Meditec, chúng tôi không chỉ sửa chữa vẻ ngoài, mà còn phục hồi niềm tin và sự tự tin cho từng khách hàng thông qua chuyên môn y khoa nghiêm ngặt."
+                </p>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-2 rounded-lg">workspace_premium</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Chuyên môn cấp cao</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Đội ngũ bác sĩ hơn 15 năm kinh nghiệm chuyên xử lý các ca biến chứng phức tạp.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-2 rounded-lg">biotech</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Công nghệ chẩn đoán hình ảnh chính xác</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Sử dụng thiết bị hiện đại xác định chính xác vị trí túi độn, filler hoặc vùng mô tổn thương.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-accent bg-accent/10 p-2 rounded-lg">fact_check</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Quy trình xử lý chuẩn y khoa</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Mọi thao tác đều thực hiện trong môi trường vô trùng tuyệt đối, tuân thủ nghiêm ngặt quy định Bộ Y tế.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-accent/5 rounded-[3rem] -rotate-3"></div>
+<img alt="Chuyên gia Meditec" class="relative rounded-[2.5rem] shadow-2xl z-10 w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6BULzUjCqWBhfU3E5GPi9EBhhfeDFFUoy8L2SZ-izX6Fa2Qo6upP-DA-C1zyko-2Btu3clwZ4rjqp1hqY1XU0EN9yumzGASs2fQYkG7qe9RZV52U0l1hUtVRqHuvbA-lEFd_1nZ2iSnHcd4iqUNvgB5vXEPJ_DUjEgCzLUqbjMnQWqoe8jyFKsgBMRD3vhW8Xrnv2u5amgYetEHgeUjOr9t_o-FEY-7H9VFNs7LRhBombsfqPK8VHCDibD9AREzkmctpZJAr9dg"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Hành trình hồi sinh nhan sắc</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Kết Quả &amp; Cảm Nhận</h3>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex text-accent mb-4">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-6 leading-relaxed">
+                    "Sau lần nâng mũi hỏng ở cơ sở không uy tín, tôi đã rất tuyệt vọng. May mắn tìm được Meditec, bác sĩ đã tận tình sửa lại và giờ tôi hoàn toàn hài lòng với dáng mũi mới."
+                </p>
+<div class="flex items-center gap-4 border-t pt-6 border-slate-100 dark:border-slate-700">
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<div class="font-bold text-slate-900 dark:text-white text-sm">Khách hàng ẩn danh</div>
+<div class="text-xs text-slate-400">Sửa mũi hỏng</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex text-accent mb-4">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-6 leading-relaxed">
+                    "Mí mắt tôi từng bị trợn và sẹo rất to. Các bác sĩ tại đây đã dùng kỹ thuật vi phẫu rất khéo léo để sửa lại. Giờ đôi mắt trông rất tự nhiên, không còn dấu vết lỗi."
+                </p>
+<div class="flex items-center gap-4 border-t pt-6 border-slate-100 dark:border-slate-700">
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<div class="font-bold text-slate-900 dark:text-white text-sm">Khách hàng ẩn danh</div>
+<div class="text-xs text-slate-400">Sửa mí lỗi</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex text-accent mb-4">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm italic mb-6 leading-relaxed">
+                    "Filler vón cục làm mặt tôi bị biến dạng. Nhờ Meditec xử lý kịp thời nên không bị hoại tử. Cảm ơn bác sĩ đã giúp tôi lấy lại gương mặt bình thường."
+                </p>
+<div class="flex items-center gap-4 border-t pt-6 border-slate-100 dark:border-slate-700">
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<div class="font-bold text-slate-900 dark:text-white text-sm">Khách hàng ẩn danh</div>
+<div class="text-xs text-slate-400">Lấy filler vón cục</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative" id="booking">
+<div class="absolute inset-0">
+<img alt="Tư vấn sửa chữa thẩm mỹ" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q"/>
+<div class="absolute inset-0 bg-primary/90 backdrop-blur-sm"></div>
+</div>
+<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Tư vấn giải pháp khắc phục cùng chuyên gia</h2>
+<p class="text-lg opacity-90 mb-10 max-w-xl mx-auto font-light leading-relaxed">Mọi tình trạng đều có giải pháp. Để lại số điện thoại để chuyên gia Meditec gọi lại tư vấn riêng tư và miễn phí.</p>
+<form class="bg-white/10 backdrop-blur-xl p-3 rounded-[2rem] max-w-2xl mx-auto flex flex-col md:flex-row gap-3 border border-white/20">
+<input class="flex-1 bg-white/95 text-slate-900 px-8 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-accent placeholder:text-slate-400" placeholder="Số điện thoại của bạn" required="" type="tel"/>
+<button class="bg-accent text-white px-10 py-4 rounded-2xl font-bold hover:bg-yellow-600 transition-all uppercase tracking-[0.15em] shadow-lg text-sm whitespace-nowrap">Đăng ký tư vấn ngay</button>
+</form>
+</div>
+</section>
+<footer class="bg-[#002B54] pt-20 pb-10 text-white relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display tracking-tight text-white">MEDITEC</span>
+</div>
+<p class="text-white/60 text-sm leading-relaxed">
+                    Hệ thống thẩm mỹ y khoa đạt chuẩn quốc tế, dẫn đầu về công nghệ phẫu thuật thẩm mỹ và xử lý biến chứng an toàn tại Việt Nam.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Dịch vụ điều trị
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent transition-colors" href="#">Sửa mí hỏng</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Sửa mũi hỏng</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Lấy filler vón cục</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Chỉnh sửa sẹo xấu</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Thông tin liên hệ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">location_on</span> 123 Đường Luxury, Quận 1, TP. HCM</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">phone</span> (088) 989 5555</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">mail</span> aesthetic@meditec.vn</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Giờ phục vụ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-3 text-white/60 text-sm">
+<li class="flex justify-between"><span>Thứ 2 - Thứ 6:</span> <span class="text-white">08:00 - 20:00</span></li>
+<li class="flex justify-between"><span>Thứ 7:</span> <span class="text-white">08:30 - 21:00</span></li>
+<li class="flex justify-between"><span>Chủ nhật:</span> <span class="text-white">08:30 - 18:00</span></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-white/40 text-xs">
+                © 2024 Thẩm Mỹ Viện Meditec - Chuyên khoa Sửa Chữa Biến Chứng.
+            </div>
+<div class="flex gap-8 text-white/40 text-xs">
+<a class="hover:text-white" href="#">Chính sách bảo mật</a>
+<a class="hover:text-white" href="#">Điều khoản sử dụng</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

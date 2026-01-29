@@ -1,0 +1,124 @@
+"use client";
+
+import PageHeader from "@/components/ui/PageHeader";
+import Link from "next/link";
+
+export default function ContactPage() {
+    const contactLinks = [
+        {
+            title: "Đặt lịch tư vấn",
+            description: "Đăng ký lịch hẹn với chuyên gia",
+            icon: "calendar_month",
+            href: "/dat-lich",
+            color: "bg-blue-50 text-blue-600"
+        },
+        {
+            title: "Câu hỏi thường gặp (FAQ)",
+            description: "Giải đáp thắc mắc phổ biến",
+            icon: "help",
+            href: "/faq",
+            color: "bg-purple-50 text-purple-600"
+        },
+        {
+            title: "Chính sách & Pháp lý",
+            description: "Thông tin về quy định và bảo mật",
+            icon: "policy",
+            href: "/chinh-sach",
+            color: "bg-emerald-50 text-emerald-600"
+        },
+        {
+            title: "Bảng giá dịch vụ",
+            description: "Tham khảo chi phí các liệu trình",
+            icon: "payments",
+            href: "/bang-gia",
+            color: "bg-orange-50 text-orange-600"
+        }
+    ];
+
+    return (
+        <main className="bg-slate-50 min-h-screen">
+            <PageHeader
+                title="Liên Hệ Với Chúng Tôi"
+                description="Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn trên hành trình chinh phục vẻ đẹp hoàn mỹ."
+                backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg"
+            />
+
+            <section className="py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Information Grid */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                        {contactLinks.map((link, index) => (
+                            <Link
+                                key={index}
+                                href={link.href}
+                                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 group"
+                            >
+                                <div className={`w-12 h-12 rounded-xl ${link.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                                    <span className="material-symbols-outlined text-2xl">{link.icon}</span>
+                                </div>
+                                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-primary transition-colors">{link.title}</h3>
+                                <p className="text-slate-500 text-sm">{link.description}</p>
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Contact Detail & Map */}
+                    <div className="grid lg:grid-cols-2 gap-12 bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl">
+                        <div className="space-y-8">
+                            <div>
+                                <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">Thông Tin Liên Hệ</h2>
+                                <p className="text-slate-600 mb-8">
+                                    Đừng ngần ngại liên hệ với chúng tôi để được tư vấn miễn phí và nhận ưu đãi tốt nhất.
+                                </p>
+                            </div>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                        <span className="material-symbols-outlined">location_on</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900">Địa chỉ</h4>
+                                        <p className="text-slate-600">88 P. Láng Hạ, Láng Hạ, Đống Đa, Hà Nội</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
+                                        <span className="material-symbols-outlined">call</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900">Hotline</h4>
+                                        <p className="text-slate-600">1900 123 456</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center flex-shrink-0">
+                                        <span className="material-symbols-outlined">mail</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900">Email</h4>
+                                        <p className="text-slate-600">contact@meditech.vn</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="h-[400px] w-full bg-slate-100 rounded-2xl overflow-hidden relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.113110940561!2d105.81524337604313!3d21.02816008780287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab70b8a1c0d1%3A0x8264d1a0c849177f!2zODggUC4gTzEgY-G6p3UsIEzDoW5nIEjhuqEsIMSQ4buRbmcgxJBhLCBIw6AgTk9pLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
+}

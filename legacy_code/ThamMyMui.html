@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thẩm Mỹ Mũi Meditec Chi Tiết - Tôn Vinh Đường Nét Thanh Tú</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0056A4", 
+                        accent: "#D4AF37", 
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 86, 164, 0.9) 0%, rgba(15, 23, 42, 0.7) 100%);
+        }
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .gold-border {
+            border-image: linear-gradient(to right, #D4AF37, #F1D592) 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display text-primary tracking-tight">MEDITEC</span>
+</div>
+<div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/TrangChu.html">Trang Chủ</a>
+<a class="text-primary border-b-2 border-primary" href="/website_ThamMy/DichVu.html">Dịch Vụ</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/VeChungToi.html">Về chúng tôi</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/ChuyenGia.html">Chuyên gia</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/KetQua.html">Kết quả</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
+</button>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20" href="#booking">Đăng ký ngay</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative py-40 flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Thẩm Mỹ Mũi Meditec" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe8NW9ZtesZOFQxS2g1DJq4y0zwZuqnNKa9T_-qVmLp9_QgdW5tirwmzoFr6_J5MVc--Kiu-KNyTFENW0xePriDHQOIcD-FRHNw3keb7COcGI5VTKV_OqG03F3vVK1JhR2OuZfLGYDges7olCsNWQ04rjmbbxVioJxmMdU4mMy28FyoehytwuVjaWDR0dd5mG4xWTfe0cdmDM-WrieOT-_dHv3ncWje1sGcLmnM83Q9fTeewGSQph4SCtxJhOj4VsbVvixDH9vBg"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h1 class="text-5xl md:text-7xl font-display font-bold mb-6">Thẩm Mỹ Mũi <br/><span class="text-accent italic">Tôn Vinh Đường Nét Thanh Tú</span></h1>
+<p class="text-xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+            Sở hữu dáng mũi chuẩn tỉ lệ vàng, hài hòa gương mặt với công nghệ nâng mũi tiên tiến nhất.
+        </p>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Danh mục dịch vụ</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Giải Pháp Toàn Diện Cho Dáng Mũi</h3>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="service-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-56 overflow-hidden">
+<img alt="Nâng mũi chỉ" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/unnamed (12).jpg"/>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Nâng mũi chỉ</h4>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">Nâng cao sống mũi nhẹ nhàng không phẫu thuật bằng chỉ collagen.</p>
+<div class="flex items-center justify-between">
+<span class="text-accent font-bold text-sm">Giá từ: 10.000.000đ</span>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-56 overflow-hidden">
+<img alt="Thu gọn cánh mũi" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/unnamed (13).jpg"/>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Thu gọn cánh mũi</h4>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">Khắc phục tình trạng cánh mũi rộng, bè ngang tạo sự thanh thoát.</p>
+<div class="flex items-center justify-between">
+<span class="text-accent font-bold text-sm">Giá từ: 8.000.000đ</span>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-56 overflow-hidden">
+<img alt="Thu gọn đầu mũi" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/unnamed (14).jpg"/>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Thu gọn đầu mũi</h4>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">Xử lý đầu mũi to, thô để đạt được tỉ lệ hài hòa với sống mũi.</p>
+<div class="flex items-center justify-between">
+<span class="text-accent font-bold text-sm">Giá từ: 12.000.000đ</span>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-56 overflow-hidden">
+<img alt="Cắt cánh mũi" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/unnamed (15).jpg"/>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Cắt cánh mũi</h4>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">Tiểu phẫu thu gọn mô mềm vùng cánh mũi, không để lại sẹo.</p>
+<div class="flex items-center justify-between">
+<span class="text-accent font-bold text-sm">Giá từ: 7.000.000đ</span>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-56 overflow-hidden">
+<img alt="Cắt nền mũi" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/unnamed (16).jpg"/>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Cắt nền mũi</h4>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">Điều chỉnh phần chân mũi quá rộng giúp lỗ mũi có hình hạt chanh.</p>
+<div class="flex items-center justify-between">
+<span class="text-accent font-bold text-sm">Giá từ: 15.000.000đ</span>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-56 overflow-hidden">
+<img alt="Chỉnh hình mũi nhẹ" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/unnamed (17).jpg"/>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Chỉnh hình mũi nhẹ</h4>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">Xử lý các khuyết điểm nhỏ như gồ nhẹ, mũi hơi lệch.</p>
+<div class="flex items-center justify-between">
+<span class="text-accent font-bold text-sm">Giá từ: 20.000.000đ</span>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700">
+<div class="relative h-56 overflow-hidden">
+<img alt="Sửa mũi hỏng" class="service-image w-full h-full object-cover transition-transform duration-700" src="/website_ThamMy/image/unnamed (18).jpg"/>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">Sửa mũi hỏng mức độ nhẹ</h4>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">Khắc phục các biến chứng sau nâng mũi ở mức độ nhẹ, hồi phục dáng tự nhiên.</p>
+<div class="flex items-center justify-between">
+<span class="text-accent font-bold text-sm">Giá từ: 25.000.000đ</span>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">Xem chi tiết <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Công nghệ độc quyền</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Kỹ Thuật Nâng Mũi Đỉnh Cao</h3>
+</div>
+<div class="grid lg:grid-cols-3 gap-8">
+<div class="p-10 bg-slate-50 dark:bg-slate-800/50 rounded-3xl text-center space-y-4">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl">view_in_ar</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white">Nâng mũi S-Line/L-Line 3D</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Mô phỏng dáng mũi 3D trước khi phẫu thuật, giúp khách hàng xem trước kết quả và lựa chọn dáng mũi ưng ý.</p>
+</div>
+<div class="p-10 bg-slate-50 dark:bg-slate-800/50 rounded-3xl text-center space-y-4 border-2 border-accent/20">
+<div class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white">Sụn sinh học an toàn</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Sử dụng chất liệu sụn cao cấp nhập khẩu, có độ tương thích sinh học cao, hạn chế tối đa đào thải và biến chứng.</p>
+</div>
+<div class="p-10 bg-slate-50 dark:bg-slate-800/50 rounded-3xl text-center space-y-4">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-3xl">health_metrics</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white">Công nghệ giảm sưng đau</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Kết hợp công nghệ Plasma lạnh giúp vết thương khô nhanh, giảm sưng nề và rút ngắn 50% thời gian nghỉ dưỡng.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Thư viện ảnh</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Kết quả nâng mũi</h3>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="relative rounded-3xl overflow-hidden mb-4 aspect-[4/5]">
+<img alt="Kết quả nâng mũi 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="/website_ThamMy/image/unnamed (19).jpg"/>
+<div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
+<p class="font-bold">Nâng mũi cấu trúc S-Line</p>
+<p class="text-xs opacity-70">Sau 30 ngày phẫu thuật</p>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative rounded-3xl overflow-hidden mb-4 aspect-[4/5]">
+<img alt="Kết quả nâng mũi 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="/website_ThamMy/image/unnamed (20).jpg"/>
+<div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
+<p class="font-bold">Nâng mũi L-Line sang chảnh</p>
+<p class="text-xs opacity-70">Sau 15 ngày phẫu thuật</p>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative rounded-3xl overflow-hidden mb-4 aspect-[4/5]">
+<img alt="Kết quả nâng mũi 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="/website_ThamMy/image/unnamed (21).jpg"/>
+<div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
+<p class="font-bold">Thu gọn cánh mũi &amp; đầu mũi</p>
+<p class="text-xs opacity-70">Sau 10 ngày phẫu thuật</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative" id="booking">
+<div class="absolute inset-0">
+<img alt="Tư vấn thẩm mỹ mũi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q"/>
+<div class="absolute inset-0 bg-primary/90 backdrop-blur-sm"></div>
+</div>
+<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Tư vấn dáng mũi cùng bác sĩ chuyên khoa</h2>
+<p class="text-lg opacity-90 mb-10 max-w-xl mx-auto font-light leading-relaxed">Để lại thông tin để được các chuyên gia thẩm mỹ mũi hàng đầu tại Meditec trực tiếp tư vấn và phác họa dáng mũi tương lai.</p>
+<form class="bg-white/10 backdrop-blur-xl p-3 rounded-[2rem] max-w-2xl mx-auto flex flex-col md:flex-row gap-3 border border-white/20">
+<input class="flex-1 bg-white/95 text-slate-900 px-8 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-accent placeholder:text-slate-400" placeholder="Số điện thoại của bạn" required="" type="tel"/>
+<button class="bg-accent text-white px-10 py-4 rounded-2xl font-bold hover:bg-yellow-600 transition-all uppercase tracking-[0.15em] shadow-lg text-sm whitespace-nowrap">Đăng ký tư vấn</button>
+</form>
+</div>
+</section>
+<footer class="bg-[#002B54] pt-20 pb-10 text-white relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display tracking-tight text-white">MEDITEC</span>
+</div>
+<p class="text-white/60 text-sm leading-relaxed">
+                    Hệ thống thẩm mỹ y khoa đạt chuẩn quốc tế, dẫn đầu về công nghệ phẫu thuật thẩm mỹ an toàn và chuyên sâu tại Việt Nam.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Dịch vụ nổi bật
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent transition-colors" href="#">Nâng mũi cấu trúc</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Cắt mí Mini Deep</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Căng da mặt toàn phần</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Hút mỡ tạo dáng</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Thông tin liên hệ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">location_on</span> 123 Đường Luxury, Quận 1, TP. HCM</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">phone</span> (088) 989 5555</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">mail</span> surgical@meditec.vn</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Giờ phục vụ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-3 text-white/60 text-sm">
+<li class="flex justify-between"><span>Thứ 2 - Thứ 6:</span> <span class="text-white">08:00 - 20:00</span></li>
+<li class="flex justify-between"><span>Thứ 7:</span> <span class="text-white">08:30 - 21:00</span></li>
+<li class="flex justify-between"><span>Chủ nhật:</span> <span class="text-white">08:30 - 18:00</span></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-white/40 text-xs">
+                © 2024 Thẩm Mỹ Viện Meditec - Chuyên khoa Phẫu Thuật Thẩm Mỹ.
+            </div>
+<div class="flex gap-8 text-white/40 text-xs">
+<a class="hover:text-white" href="#">Chính sách bảo mật</a>
+<a class="hover:text-white" href="#">Điều khoản sử dụng</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

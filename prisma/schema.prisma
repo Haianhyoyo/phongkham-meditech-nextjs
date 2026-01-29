@@ -1,0 +1,186 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  password      String?
+  emailVerified DateTime?
+  image         String?
+  role          String    @default("USER") // ADMIN, EDITOR, CSKH, MARKETING, USER
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  posts         Post[]
+  logs          Log[]     // Added relation for Log
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// --- MEDITECH SPECIFIC MODELS ---
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  
+  description String?  @db.Text
+  content     String?  @db.LongText // Rich text content
+  
+  image       String?
+  icon        String?
+  
+  price       Float?
+  duration    String?
+  
+  category    String?  // Tiểu phẫu / Đại phẫu
+  
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Backwards compatibility fields (optional)
+  type        String?
+  shortDesc   String?
+  images      String?
+  recoveryTime String?
+}
+
+model Doctor {
+  id             String   @id @default(cuid())
+  name           String
+  role           String   // Giám đốc chuyên môn, Bác sĩ da liễu...
+  image          String?
+  
+  specialty      String?
+  experience     String?
+  
+  qualifications String?  @db.Text // JSON string or text list
+  description    String?  @db.Text
+  
+  isActive       Boolean  @default(true)
+  order          Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Post {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  
+  summary     String?  @db.Text
+  content     String?  @db.LongText // Rich HTML content
+  
+  image       String?
+  category    String?  // Tin tức, Kiến thức, Khuyến mãi...
+  
+  isPublished Boolean  @default(false)
+  
+  authorId    String?
+  author      User?    @relation(fields: [authorId], references: [id])
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Promotion {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.Text
+  
+  discount    String?
+  code        String?
+  expiry      String? // Date string or specific date
+  
+  image       String?
+  isActive    Boolean  @default(true)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Review {
+  id           String   @id @default(cuid())
+  customerName String
+  rating       Int      @default(5)
+  content      String?  @db.Text
+  
+  service      String?
+  image        String?
+  isActive     Boolean  @default(true)
+  
+  createdAt    DateTime @default(now())
+}
+
+model Booking {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  service   String
+  message   String?  @db.Text
+  
+  status    String   @default("PENDING") // PENDING, CONFIRMED, DONE, CANCELLED
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Setting {
+  id        String   @id @default(cuid())
+  key       String   @unique // e.g., "site_title", "contact_phone"
+  value     String?  @db.Text
+  group     String?  // General, SEO, Contact
+  updatedAt DateTime @updatedAt
+}
+
+model Log {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String
+  details   String?  @db.Text
+  createdAt DateTime @default(now())
+}

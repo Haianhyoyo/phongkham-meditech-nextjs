@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tiểu Phẫu Da &amp; Mô Mềm - Meditec Clinic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0056A4",
+                        accent: "#D4AF37",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 86, 164, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display text-primary tracking-tight">MEDITEC</span>
+</div>
+<div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/TrangChu.html">Trang Chủ</a>
+<a class="text-primary border-b-2 border-primary" href="/website_ThamMy/DichVu.html">Dịch Vụ</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/VeChungToi.html">Về chúng tôi</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/ChuyenGia.html">Chuyên gia</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/KetQua.html">Kết quả</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
+</button>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20" href="#booking">Đăng ký ngay</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative py-32 flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Tiểu phẫu da Meditec" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<div class="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-accent text-sm font-semibold tracking-widest uppercase">
+            Tiểu phẫu thẩm mỹ
+        </div>
+<h1 class="text-5xl md:text-7xl font-display font-bold mb-6">Tiểu Phẫu Da &amp; Mô Mềm</h1>
+<p class="text-xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+            Xử lý triệt để các khuyết điểm về da bằng phương pháp tiểu phẫu nhẹ nhàng, an toàn và thẩm mỹ.
+        </p>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Danh Mục Tiểu Phẫu Chuyên Sâu</h2>
+<div class="w-24 h-1 bg-accent mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">colorize</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Cắt nốt ruồi thẩm mỹ</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Loại bỏ tận gốc nốt ruồi lồi, to hoặc có nguy cơ bệnh lý bằng kỹ thuật khâu thẩm mỹ.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 500.000đ</span>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">layers</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Cắt u mỡ</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Tiểu phẫu bóc tách khối u mỡ dưới da, kỹ thuật ít xâm lấn giúp vết thương mau lành.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 2.000.000đ</span>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">bubble_chart</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Cắt u bã đậu</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Xử lý triệt để bao xơ u bã đậu, tránh tình trạng tái phát hoặc viêm nhiễm nặng.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 1.500.000đ</span>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">water_drop</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Cắt u tuyến mồ hôi</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Điều trị mụn thịt, u tuyến mồ hôi quanh mắt bằng laser hoặc tiểu phẫu chính xác.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 1.000.000đ</span>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">unfold_more</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Cắt polyp da</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Loại bỏ các mẩu thịt dư (skin tags) nhanh chóng, không đau, không để lại sẹo.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 800.000đ</span>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">healing</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Điều trị sẹo lồi</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Phối hợp tiêm xơ và tiểu phẫu để san phẳng các vùng sẹo lồi lâu năm khó điều trị.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 3.000.000đ</span>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">content_cut</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Chỉnh sửa sẹo xấu</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Phẫu thuật tạo hình lại các vết sẹo co kéo, sẹo giãn, giúp vùng da thẩm mỹ hơn.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 5.000.000đ</span>
+</div>
+</div>
+<div class="service-card group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">biotech</span>
+<h3 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Sinh thiết da</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Lấy mẫu bệnh phẩm da để xét nghiệm giải phẫu bệnh, chẩn đoán chính xác bệnh lý.</p>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-700 flex justify-between items-center">
+<span class="text-accent font-bold">Giá từ: 1.200.000đ</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-12 text-center">
+<div class="space-y-4">
+<div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+</div>
+<h4 class="text-xl font-display font-bold text-slate-900 dark:text-white">Vô trùng tuyệt đối</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Quy trình phẫu thuật khép kín trong môi trường vô trùng tiêu chuẩn Bộ Y tế.</p>
+</div>
+<div class="space-y-4">
+<div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">magic_button</span>
+</div>
+<h4 class="text-xl font-display font-bold text-slate-900 dark:text-white">Không để lại sẹo xấu</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Sử dụng chỉ khâu thẩm mỹ siêu mảnh và kỹ thuật khâu nội lực hạn chế sẹo tối đa.</p>
+</div>
+<div class="space-y-4">
+<div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+</div>
+<h4 class="text-xl font-display font-bold text-slate-900 dark:text-white">Xử lý nhanh chóng</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Thời gian thực hiện chỉ từ 15-30 phút, khách hàng có thể ra về ngay trong ngày.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Kết quả khách hàng</h2>
+<p class="text-slate-500 dark:text-slate-400">Minh chứng cho sự chính xác và thẩm mỹ trong từng ca tiểu phẫu</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-lg">
+<img alt="Kết quả cắt nốt ruồi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/website_ThamMy/image/Gemini_Generated_Image_k5lp86k5lp86k5lp.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8">
+<div class="text-white">
+<p class="text-xs font-bold uppercase tracking-widest text-accent mb-1">Cắt nốt ruồi thẩm mỹ</p>
+<p class="text-sm opacity-90">Kết quả sau 7 ngày - Không thâm sẹo</p>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-lg">
+<img alt="Kết quả chỉnh sẹo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/website_ThamMy/image/Gemini_Generated_Image_pj2xx8pj2xx8pj2x.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8">
+<div class="text-white">
+<p class="text-xs font-bold uppercase tracking-widest text-accent mb-1">Chỉnh sửa sẹo xấu</p>
+<p class="text-sm opacity-90">Phục hồi 95% diện tích bề mặt da</p>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-lg">
+<img alt="Kết quả u bã đậu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/website_ThamMy/image/Gemini_Generated_Image_l8gbynl8gbynl8gb.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8">
+<div class="text-white">
+<p class="text-xs font-bold uppercase tracking-widest text-accent mb-1">Cắt u bã đậu</p>
+<p class="text-sm opacity-90">Xử lý triệt để bao xơ - Vết mổ kín</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative" id="booking">
+<div class="absolute inset-0">
+<img alt="Tư vấn tiểu phẫu" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q"/>
+<div class="absolute inset-0 bg-primary/90 backdrop-blur-sm"></div>
+</div>
+<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Đăng ký tư vấn tiểu phẫu</h2>
+<p class="text-lg opacity-90 mb-10 max-w-xl mx-auto font-light leading-relaxed">Gửi thông tin để bác sĩ chuyên khoa Meditec tư vấn trực tiếp về tình trạng da của bạn.</p>
+<form class="bg-white/10 backdrop-blur-xl p-3 rounded-[2rem] max-w-2xl mx-auto flex flex-col md:flex-row gap-3 border border-white/20">
+<input class="flex-1 bg-white/95 text-slate-900 px-8 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-accent placeholder:text-slate-400" placeholder="Số điện thoại của bạn" required="" type="tel"/>
+<button class="bg-accent text-white px-10 py-4 rounded-2xl font-bold hover:bg-yellow-600 transition-all uppercase tracking-[0.15em] shadow-lg text-sm whitespace-nowrap">Đăng ký ngay</button>
+</form>
+</div>
+</section>
+<footer class="bg-[#002B54] pt-20 pb-10 text-white relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-3xl">medical_services</span>
+<span class="text-2xl font-bold font-display tracking-tight text-white">MEDITEC</span>
+</div>
+<p class="text-white/60 text-sm leading-relaxed">
+                    Hệ thống thẩm mỹ y khoa đạt chuẩn quốc tế, dẫn đầu về công nghệ phẫu thuật thẩm mỹ an toàn và chuyên sâu tại Việt Nam.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Dịch vụ nổi bật
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent transition-colors" href="#">Cắt nốt ruồi thẩm mỹ</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Cắt u mỡ / u bã đậu</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Điều trị sẹo lồi</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Tiểu phẫu da liễu</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Thông tin liên hệ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">location_on</span> 123 Đường Luxury, Quận 1, TP. HCM</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">phone</span> (088) 989 5555</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">mail</span> clinic@meditec.vn</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                    Giờ phục vụ
+                    <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-3 text-white/60 text-sm">
+<li class="flex justify-between"><span>Thứ 2 - Thứ 6:</span> <span class="text-white">08:00 - 20:00</span></li>
+<li class="flex justify-between"><span>Thứ 7:</span> <span class="text-white">08:30 - 21:00</span></li>
+<li class="flex justify-between"><span>Chủ nhật:</span> <span class="text-white">08:30 - 18:00</span></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-white/40 text-xs">
+                © 2024 Thẩm Mỹ Viện Meditec - Chuyên khoa Tiểu Phẫu &amp; Thẩm Mỹ Da.
+            </div>
+<div class="flex gap-8 text-white/40 text-xs">
+<a class="hover:text-white" href="#">Chính sách bảo mật</a>
+<a class="hover:text-white" href="#">Điều khoản sử dụng</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

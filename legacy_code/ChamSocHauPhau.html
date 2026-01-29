@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chăm Sóc Hậu Phẫu Meditec Chi Tiết</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0056A4", 
+                        accent: "#D4AF37", 
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 86, 164, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        .step-line::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background: #E2E8F0;
+            z-index: 0;
+        }
+        .dark .step-line::after {
+            background: #1E293B;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">medical_services</span>
+<span class="text-2xl font-bold font-display text-primary tracking-tight">MEDITEC</span>
+</div>
+<div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/TrangChu.html">Trang Chủ</a>
+<a class="text-primary border-b-2 border-primary" href="/website_ThamMy/DichVu.html">Dịch Vụ</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/VeChungToi.html">Về chúng tôi</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/ChuyenGia.html">Chuyên gia</a>
+<a class="hover:text-primary transition-colors" href="/website_ThamMy/KetQua.html">Kết quả</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
+</button>
+<a class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20" href="#booking">Cần hỗ trợ?</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative py-32 flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Y tá chăm sóc bệnh nhân" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyKfYe5R7nL12rlD-FR-SD0OMS8iFKl60Ihar2_RXNStVsLTquAw92nYPg9IIT4Ci5959ti3b09PXCdht9nf4AqmL1RKGABqcCL4fDg5EFTdW31WMOnnbZaLGQTbtWy7c_uhbppbBC7dpKWHs_cX-aL7-o3X0DZK5tLXCBsB7l6lo8sRE_jZtGlVvT3EFRA3iGlvMjE5XJPrYZYfILJR5GMbsJtv_SUJOmiBF1uLeNz-pS3Imlmnj1KzTMW0Cyl_62VsCb_aj3vA"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h1 class="text-5xl md:text-7xl font-display font-bold mb-6">Chăm Sóc &amp; Theo Dõi Hậu Phẫu</h1>
+<p class="text-xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+                Đội ngũ y bác sĩ Meditec đồng hành cùng bạn trong hành trình hồi phục, đảm bảo kết quả thẩm mỹ hoàn hảo và an toàn nhất.
+            </p>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Dịch vụ chuyên biệt</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Giải Pháp Phục Hồi Toàn Diện</h3>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="service-card group bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">content_cut</span>
+</div>
+<h4 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Thay băng - cắt chỉ</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Quy trình vệ sinh vết thương chuẩn y khoa, đảm bảo vô trùng và không gây đau đớn cho khách hàng.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="service-card group bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">healing</span>
+</div>
+<h4 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Chăm sóc vết mổ thẩm mỹ</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Ứng dụng công nghệ Plasma và các sản phẩm chuyên dụng giúp vết mổ nhanh liền, mờ sẹo nhanh chóng.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="service-card group bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">fluid_med</span>
+</div>
+<h4 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Xử lý tụ dịch, tụ máu nhẹ</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Can thiệp kịp thời bằng các kỹ thuật y tế hiện đại giúp vết thương khô thoáng, giảm sưng nề nhanh.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="service-card group bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+<div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">visibility</span>
+</div>
+<h4 class="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">Phục hồi hậu tiểu phẫu</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Theo dõi sát sao tiến độ hồi phục sau các ca tiểu phẫu mắt, môi, mũi... để có kết quả đẹp tự nhiên nhất.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Xem chi tiết <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-950">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-20">
+<h2 class="text-accent font-bold uppercase tracking-[0.2em] text-sm mb-4">Quy trình y khoa</h2>
+<h3 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white">Quy Trình Phục Hồi 5 Sao</h3>
+</div>
+<div class="grid md:grid-cols-4 gap-8 relative">
+<div class="relative z-10 text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-white dark:bg-slate-800 rounded-full border-4 border-primary flex items-center justify-center mb-6 shadow-xl relative z-10">
+<span class="material-symbols-outlined text-primary text-2xl">sanitizer</span>
+</div>
+<div class="hidden md:block absolute top-8 left-1/2 w-full h-[2px] bg-slate-200 dark:bg-slate-800 -z-0"></div>
+<h4 class="font-bold text-lg mb-2 dark:text-white">Thay băng định kỳ</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Vệ sinh vết mổ mỗi ngày theo chuẩn vô khuẩn.</p>
+</div>
+<div class="relative z-10 text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-white dark:bg-slate-800 rounded-full border-4 border-primary flex items-center justify-center mb-6 shadow-xl relative z-10">
+<span class="material-symbols-outlined text-primary text-2xl">fact_check</span>
+</div>
+<div class="hidden md:block absolute top-8 left-1/2 w-full h-[2px] bg-slate-200 dark:bg-slate-800 -z-0"></div>
+<h4 class="font-bold text-lg mb-2 dark:text-white">Kiểm tra vết mổ</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Bác sĩ chuyên khoa đánh giá tiến độ lành thương.</p>
+</div>
+<div class="relative z-10 text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-white dark:bg-slate-800 rounded-full border-4 border-primary flex items-center justify-center mb-6 shadow-xl relative z-10">
+<span class="material-symbols-outlined text-primary text-2xl">support_agent</span>
+</div>
+<div class="hidden md:block absolute top-8 left-1/2 w-full h-[2px] bg-slate-200 dark:bg-slate-800 -z-0"></div>
+<h4 class="font-bold text-lg mb-2 dark:text-white">Hỗ trợ 24/7</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Đội ngũ điều dưỡng giải đáp mọi thắc mắc tức thì.</p>
+</div>
+<div class="relative z-10 text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-white dark:bg-slate-800 rounded-full border-4 border-primary flex items-center justify-center mb-6 shadow-xl relative z-10">
+<span class="material-symbols-outlined text-primary text-2xl">stethoscope</span>
+</div>
+<h4 class="font-bold text-lg mb-2 dark:text-white">Tái khám định kỳ</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Gặp trực tiếp bác sĩ trưởng khoa để chốt kết quả.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<img alt="Bác sĩ tư vấn chăm sóc" class="rounded-[2.5rem] shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg"/>
+<div class="absolute -bottom-6 -right-6 bg-accent p-8 rounded-2xl shadow-xl text-white max-w-xs">
+<p class="italic text-sm">"Sự tuân thủ hướng dẫn tại nhà quyết định 30% vẻ đẹp cuối cùng của kết quả thẩm mỹ."</p>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-primary font-bold uppercase tracking-[0.2em] text-sm">Lời khuyên chuyên gia</h2>
+<h3 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Lưu Ý Chăm Sóc Tại Nhà</h3>
+<div class="space-y-6">
+<div class="flex gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border-l-4 border-accent">
+<span class="material-symbols-outlined text-accent">restaurant</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">Chế độ dinh dưỡng khoa học</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Tránh thực phẩm gây lồi sẹo (rau muống, nếp) và ưu tiên thực phẩm giàu Vitamin C, Protein sạch.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border-l-4 border-accent">
+<span class="material-symbols-outlined text-accent">bedtime</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">Nghỉ ngơi và tư thế ngủ</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Nên nằm ngửa, kê cao đầu trong 3-5 ngày đầu để giảm thiểu tình trạng sưng bầm.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl border-l-4 border-accent">
+<span class="material-symbols-outlined text-accent">clean_hands</span>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">Giữ khô vết thương</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Tuyệt đối không để nước sinh hoạt dính vào vết mổ trước khi được sự đồng ý của bác sĩ.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative" id="booking">
+<div class="absolute inset-0">
+<img alt="Cơ sở vật chất Meditec" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q"/>
+<div class="absolute inset-0 bg-primary/95 backdrop-blur-sm"></div>
+</div>
+<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Cần hỗ trợ sau phẫu thuật?</h2>
+<p class="text-lg opacity-90 mb-10 max-w-xl mx-auto font-light leading-relaxed">Nhập số điện thoại để được kết nối trực tiếp với điều dưỡng trưởng khoa hỗ trợ kịp thời.</p>
+<form class="bg-white/10 backdrop-blur-xl p-3 rounded-[2rem] max-w-2xl mx-auto flex flex-col md:flex-row gap-3 border border-white/20">
+<input class="flex-1 bg-white/95 text-slate-900 px-8 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-accent placeholder:text-slate-400" placeholder="Số điện thoại của bạn" required="" type="tel"/>
+<button class="bg-accent text-white px-10 py-4 rounded-2xl font-bold hover:bg-yellow-600 transition-all uppercase tracking-[0.15em] shadow-lg text-sm whitespace-nowrap">Kết nối ngay</button>
+</form>
+</div>
+</section>
+<footer class="bg-[#002B54] pt-20 pb-10 text-white relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-4 gap-12 mb-16 pb-16 border-b border-white/10">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-3xl font-bold">medical_services</span>
+<span class="text-2xl font-bold font-display tracking-tight text-white">MEDITEC</span>
+</div>
+<p class="text-white/60 text-sm leading-relaxed">
+                        Hệ thống thẩm mỹ y khoa đạt chuẩn quốc tế, dẫn đầu về công nghệ phẫu thuật thẩm mỹ an toàn và chuyên sâu tại Việt Nam.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors border border-white/10" href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                        Dịch vụ hậu phẫu
+                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent transition-colors" href="#">Cắt chỉ - Thay băng</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Chăm sóc Plasma</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Trị liệu sưng bầm</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Tư vấn dinh dưỡng</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                        Thông tin liên hệ
+                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-4 text-white/60 text-sm">
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">location_on</span> 123 Đường Luxury, Quận 1, TP. HCM</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">phone</span> (088) 989 5555</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-accent text-lg">mail</span> nursing@meditec.vn</li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-bold mb-8 relative inline-block">
+                        Giờ làm việc
+                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-accent"></span>
+</h5>
+<ul class="space-y-3 text-white/60 text-sm">
+<li class="flex justify-between"><span>Thứ 2 - Thứ 6:</span> <span class="text-white">08:00 - 20:00</span></li>
+<li class="flex justify-between"><span>Thứ 7 - CN:</span> <span class="text-white">08:30 - 18:00</span></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-white/40 text-xs">
+                    © 2024 Thẩm Mỹ Viện Meditec - Chăm sóc hậu phẫu chuyên nghiệp.
+                </div>
+<div class="flex gap-8 text-white/40 text-xs">
+<a class="hover:text-white" href="#">Chính sách bảo mật</a>
+<a class="hover:text-white" href="#">Điều khoản sử dụng</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

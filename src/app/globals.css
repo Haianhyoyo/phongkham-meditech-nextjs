@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0056A4;
+  --color-accent: #D4AF37;
+  --color-background-light: #F8FAFC;
+  --color-background-dark: #0F172A;
+
+  --font-display: var(--font-playfair-display);
+  --font-sans: var(--font-inter);
+
+  --radius-DEFAULT: 0.5rem;
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #1e293b;
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+}
+
+.hero-gradient-dark {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
