@@ -29,10 +29,11 @@ export async function GET(request: Request) {
 
 // POST: Create a new service
 export async function POST(request: Request) {
-    const session = await getServerSession(authOptions as any);
+    type AppSession = { user?: { role?: string } } | null;
+    const session = (await getServerSession(authOptions as any)) as AppSession;
 
-    // Check if user is authorized (Admin or Editor)
-    if (!session || !["ADMIN", "EDITOR"].includes(session.user.role)) {
+    const role = session?.user?.role;
+    if (!role || !["ADMIN", "EDITOR"].includes(role)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 

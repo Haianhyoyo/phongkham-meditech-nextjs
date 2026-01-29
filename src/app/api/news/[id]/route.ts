@@ -36,8 +36,11 @@ export async function PUT(
     request: Request,
     { params }: { params: Promise<{ id: string }> }
 ) {
-    const session = await getServerSession(authOptions as any);
-    if (!session || !["ADMIN", "EDITOR", "MARKETING"].includes(session.user.role)) {
+    type AppSession = { user?: { role?: string } } | null;
+    const session = await getServerSession(authOptions as any) as AppSession;
+
+    const role = session?.user?.role;
+    if (!role || !["ADMIN", "EDITOR", "MARKETING"].includes(role)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
@@ -61,8 +64,11 @@ export async function DELETE(
     request: Request,
     { params }: { params: Promise<{ id: string }> }
 ) {
-    const session = await getServerSession(authOptions as any);
-    if (!session || !["ADMIN"].includes(session.user.role)) {
+    type AppSession = { user?: { role?: string } } | null;
+    const session = (await getServerSession(authOptions as any)) as AppSession;
+
+    const role = session?.user?.role;
+    if (!role || !["ADMIN"].includes(role)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
