@@ -1,39 +1,66 @@
-# Hướng Dẫn Đẩy Code Lên Hosting Mắt Bão (Deploy)
+# Hướng Dẫn Đẩy Code Lên Hosting Mắt Bão (Có Admin + Database)
 
-Vì hosting Mắt Bão thông thường (cPanel/Plesk) chuyên chạy PHP/HTML tĩnh và không hỗ trợ chạy trực tiếp Node.js server (trừ khi dùng VPS), giải pháp tối ưu nhất là **Xuất bản Tĩnh (Static Export)**.
-
-Tôi đã cấu hình sẵn `next.config.ts` để bạn có thể xuất ra file HTML/CSS tĩnh.
-
-## Bước 1: Tạo Bộ Code Chạy Trên Hosting (Build)
-
-Bạn mở Terminal trong VS Code và chạy lệnh sau (hoặc nhờ tôi chạy giúp nếu chưa chạy):
-
-```bash
-npm run build
-```
-
-**Kết quả:**
-- Sau khi chạy xong, trong thư mục dự án sẽ xuất hiện một thư mục tên là **`out`**.
-- Đây chính là thư mục chứa toàn bộ website của bạn (HTML, CSS, Ảnh, JS).
-
-## Bước 2: Tải Code Lên Hosting Mắt Bão
-
-Bạn có thể dùng **File Manager** trên trang quản trị Hosting (cPanel/Plesk) hoặc phần mềm FTP (như FileZilla).
-
-1.  **Đăng nhập** vào quản trị Hosting Mắt Bão.
-2.  Tìm đến mục **File Manager (Quản lý tập tin)**.
-3.  Truy cập vào thư mục gốc của website (thường là `public_html`, `wwwroot` hoặc `httpdocs`).
-4.  **Xóa hết** các file cũ/mặc định trong đó (nếu có).
-5.  **Tải lên (Upload)** toàn bộ **các file và thư mục nằm BÊN TRONG thư mục `out`** mà bước 1 vừa tạo ra.
-    *   *Lưu ý: Copy ruột của `out`, không copy cả folder `out`. Bạn sẽ thấy file `index.html` nằm ngay ngoài cùng thư mục `public_html`.*
-
-## Bước 3: Kiểm Tra
-
-Truy cập tên miền của bạn. Website sẽ hoạt động bình thường!
+Để trang Admin và Đăng nhập hoạt động, bạn cần deploy chạy **Node.js**.
+Cấu trúc Database hiện tại là **SQLite** (lưu trong 1 file `dev.db`), rất tiện lợi vì bạn chỉ cần upload file này lên là chạy, không cần cài đặt MySQL rườm rà.
 
 ---
 
-## Lưu ý Quan trọng
+## Bước 1: Chuẩn Bị File (Build Code)
 
-1.  **Form Liên hệ / Đặt lịch**: Vì là web tĩnh, code xử lý gửi mail (nếu có backend) sẽ không chạy trên hosting này. Bạn sẽ cần dùng dịch vụ bên thứ 3 (như EmailJS, Google Form) hoặc code PHP riêng để xử lý form.
-2.  **Database**: File `database.sql` tôi tạo là để bạn import vào **phpMyAdmin** trên hosting để lưu trữ dữ liệu nếu sau này bạn phát triển thêm phần quản trị (Admin) bằng PHP hoặc ngôn ngữ khác kết nối vào.
+1.  Mở Terminal và chạy lệnh build:
+    ```bash
+    npm run build
+    ```
+2.  Sau khi chạy xong, trong thư mục dự án sẽ có folder `.next`.
+
+## Bước 2: Đóng Gói File Để Gửi/Upload
+
+Bạn cần gom các thư mục sau vào **1 file ZIP** để gửi cho kỹ thuật Mắt Bão hoặc tự upload:
+
+1.  Truy cập vào folder dự án `.next/standalone`.
+    *   *Lưu ý: Nếu không thấy folder `standalone`, hãy báo tôi để kiểm tra lại cấu hình.*
+2.  **Copy** folder `public` (ở ngoài cùng dự án) -> **Paste** vào trong `.next/standalone`.
+3.  **Copy** folder `.next/static` -> **Paste** vào trong `.next/standalone/.next/static`.
+    *   *(Bạn cần tạo folder `.next` trong `standalone` nếu chưa có, rồi paste `static` vào đó)*
+4.  **Copy** file `prisma/dev.db` -> **Paste** vào trong `.next/standalone/prisma/dev.db`.
+    *   *Đây là file chứa tài khoản Admin `admin@meditech.com`. Bắt buộc phải có.*
+
+**Kết quả cuối cùng:** Folder `standalone` của bạn phải có cấu trúc như sau:
+```
+standalone/
+├── .next/
+│   ├── static/    <-- (Copy từ .next/static gốc)
+│   └── ...
+├── public/        <-- (Copy từ public gốc)
+├── prisma/
+│   └── dev.db     <-- (FILE DATABASE QUAN TRỌNG)
+├── server.js
+└── package.json
+```
+
+**Nén folder `standalone` này thành file `.zip`.**
+
+---
+
+## Bước 3: Cấu Hình Trên Mắt Bão (Node.js)
+
+Gửi file Zip đó cho kỹ thuật Mắt Bão hoặc tự làm:
+
+1.  Vào cPanel -> **Setup Node.js App**.
+2.  Tạo App mới:
+    *   **Node.js Version**: Chọn bản 18 hoặc 20.
+    *   **App Mode**: Production.
+    *   **App Root**: `/home/domain/public_html` (hoặc đường dẫn bạn muốn).
+    *   **Application URL**: Tên miền web.
+    *   **Application Startup File**: `server.js`
+3.  Upload và giải nén file Zip vào thư mục App Root.
+4.  Bấm **Start App**.
+
+---
+
+## Giải đáp câu hỏi về Database
+> "có cần gửi database cho họ không bạn"
+
+**CÓ.**
+Vì mình đang dùng SQLite, **Database chính là file `dev.db`**.
+Bạn **phải gửi kèm file này** (như hướng dẫn ở Bước 2) thì lên đó mới đăng nhập được bằng tài khoản Admin hiện tại.

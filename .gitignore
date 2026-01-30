@@ -41,3 +41,28 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+
+node_modules/
+.next/
+out/
+
+.env
+.env.local
+.env.production
+
+npm-debug.log*
+yarn-error.log*
+
+.DS_Store
+Thumbs.db
+
+# Database files (block actual database, allow SQL exports)
+*.db
+*.db-shm
+*.db-wal
+prisma/dev.db
+
+# Temporary scripts
+check-admin.js
+get-admin-hash.js

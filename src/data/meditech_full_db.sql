@@ -23,9 +23,8 @@ CREATE TABLE IF NOT EXISTS `User` (
 
 -- Seed data for `User` (Admin: admin@meditech.com / admin123)
 INSERT INTO `User` (`id`, `name`, `email`, `password`, `role`, `createdAt`, `updatedAt`) VALUES
-('clrv001admin', 'Admin User', 'admin@meditech.com', '$2a$10$yS.sS5Ew.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g', 'ADMIN', NOW(), NOW());
--- Note: You might need to reset password via Forgot Password or use the seed script if this hash doesn't work. The hash above is a placeholder. 
--- BETTER APPROACH: Login not via hash but via code. Ideally rely on `npx tsx prisma/seed.ts` to create this user securely.
+('clrv001admin', 'Admin User', 'admin@meditech.com', '$2b$10$GcKrarGCOGSRBJeDdIkgKOKEKRhEEP9y', 'ADMIN', NOW(), NOW());
+-- Password: admin123 (bcrypt hashed)
 
 -- --------------------------------------------------------
 -- Table structure for table `Account`

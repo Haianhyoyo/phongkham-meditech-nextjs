@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -29,12 +29,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String? @db.Text
-  access_token      String? @db.Text
+  refresh_token     String? 
+  access_token      String? 
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String? @db.Text
+  id_token          String? 
   session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -65,8 +65,8 @@ model Service {
   title       String
   slug        String   @unique
   
-  description String?  @db.Text
-  content     String?  @db.LongText // Rich text content
+  description String?  
+  content     String?   // Rich text content
   
   image       String?
   icon        String?
@@ -96,8 +96,8 @@ model Doctor {
   specialty      String?
   experience     String?
   
-  qualifications String?  @db.Text // JSON string or text list
-  description    String?  @db.Text
+  qualifications String?   // JSON string or text list
+  description    String?  
   
   isActive       Boolean  @default(true)
   order          Int      @default(0)
@@ -110,8 +110,8 @@ model Post {
   title       String
   slug        String   @unique
   
-  summary     String?  @db.Text
-  content     String?  @db.LongText // Rich HTML content
+  summary     String?  
+  content     String?   // Rich HTML content
   
   image       String?
   category    String?  // Tin tức, Kiến thức, Khuyến mãi...
@@ -128,7 +128,7 @@ model Post {
 model Promotion {
   id          String   @id @default(cuid())
   title       String
-  description String?  @db.Text
+  description String?  
   
   discount    String?
   code        String?
@@ -145,7 +145,7 @@ model Review {
   id           String   @id @default(cuid())
   customerName String
   rating       Int      @default(5)
-  content      String?  @db.Text
+  content      String?  
   
   service      String?
   image        String?
@@ -160,7 +160,7 @@ model Booking {
   phone     String
   email     String?
   service   String
-  message   String?  @db.Text
+  message   String?  
   
   status    String   @default("PENDING") // PENDING, CONFIRMED, DONE, CANCELLED
   
@@ -171,7 +171,7 @@ model Booking {
 model Setting {
   id        String   @id @default(cuid())
   key       String   @unique // e.g., "site_title", "contact_phone"
-  value     String?  @db.Text
+  value     String?  
   group     String?  // General, SEO, Contact
   updatedAt DateTime @updatedAt
 }
@@ -181,6 +181,6 @@ model Log {
   userId    String?
   user      User?    @relation(fields: [userId], references: [id])
   action    String
-  details   String?  @db.Text
+  details   String?  
   createdAt DateTime @default(now())
 }
