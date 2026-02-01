@@ -43,6 +43,7 @@ export async function POST(request: Request) {
                 code,
                 image,
                 isActive: true,
+                metadata: JSON.stringify({ tags: [] })
             },
         });
 

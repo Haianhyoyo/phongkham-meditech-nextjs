@@ -9,36 +9,46 @@ export default function Footer() {
             phone: "024 3872 3872"
         },
         {
-            city: "TP. Hồ Chí Minh",
-            address: "123 Nguyễn Du, Quận 1",
-            phone: "028 3825 3825"
+            city: "Hà Nội",
+            address: "61 Nguyễn Khang, Cầu Giấy",
+            phone: "024 3872 3872"
         }
     ];
 
-    const insurancePartners = [
-        "Bảo Việt", "Bảo Minh", "PVI", "Liberty", "Prudential", "Manulife"
-    ];
 
     return (
-        <footer className="bg-slate-900 pt-16 pb-8 text-white">
+        <footer className="bg-slate-900 pt-16 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main Footer Content */}
-                <div className="grid lg:grid-cols-4 gap-12 mb-12 pb-12 border-b border-white/10">
+                <div className="grid lg:grid-cols-4 gap-12 pb-6 border-b border-white/10">
                     {/* Logo & About */}
                     <div className="lg:col-span-1 space-y-6">
-                        <Link href="/" className="block">
-                            <div className="relative w-48 h-24">
+                        <Link href="/" className="block -ml-1.5 lg:-ml-2.5">
+                            <div className="relative w-[300px] h-[100px] lg:w-[420px] lg:h-[140px]">
                                 <Image
                                     src="/image/logo-meditech-ultra.png"
                                     alt="MEDITECH Logo"
                                     fill
-                                    className="object-contain object-left scale-150 origin-left brightness-0 invert"
+                                    className="object-contain object-left scale-[1.5] lg:scale-[1.7] origin-left brightness-0 invert"
                                 />
                             </div>
                         </Link>
-                        <p className="text-slate-400 text-sm leading-relaxed">
-                            Tái định nghĩa vẻ đẹp thông qua sự chính xác của y khoa. Chúng tôi mang đến những tiêu chuẩn chăm sóc thẩm mỹ cao cấp nhất.
-                        </p>
+
+                        <div className="space-y-4 -mt-4 lg:-mt-6">
+                            <div className="text-white font-extrabold text-xl leading-tight uppercase tracking-tight font-sans">
+                                CÔNG TY CỔ PHẦN PHÒNG KHÁM ĐA KHOA MEDITECH
+                            </div>
+
+                            <div className="text-slate-400 text-xs leading-relaxed space-y-1">
+                                <p>Số đăng ký kinh doanh: 0102362369 cấp bởi Sở kế hoạch và đầu tư Thành phố Hà Nội, đăng ký lần đầu ngày 11 tháng 9 năm 2007</p>
+                            </div>
+
+                            <div className="pt-4 border-t border-white/10">
+                                <div className="text-white font-bold text-sm uppercase tracking-wider mb-4">
+                                    HỆ THỐNG PHÒNG KHÁM <br />ĐA KHOA MEDITECH
+                                </div>
+                            </div>
+                        </div>
                         <div className="flex gap-3">
                             <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                                 <span className="material-symbols-outlined text-lg">share</span>
@@ -110,26 +120,68 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Insurance Partners */}
-                <div className="mb-8 pb-8 border-b border-white/10">
-                    <h5 className="text-white font-bold text-lg mb-6 text-center">Đối tác bảo hiểm</h5>
-                    <div className="flex flex-wrap justify-center items-center gap-8">
-                        {insurancePartners.map((partner, index) => (
-                            <div key={index} className="px-6 py-3 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
-                                <span className="text-slate-300 font-medium text-sm">{partner}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
 
-                {/* Bottom Bar */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-                    <div className="text-center md:text-left">
-                        © 2024 Thẩm Mỹ Viện Meditech. Tất cả các quyền được bảo hộ.
+            </div>
+
+            {/* Redesigned Bottom Bar - Vibrant Blue */}
+            <div className="bg-primary py-4 mt-0">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="text-white text-sm font-medium tracking-wide">
+                        Copyright © 2024 Thẩm Mỹ Viện Meditech. Tất cả các quyền được bảo hộ.
                     </div>
-                    <div className="flex gap-6 text-xs">
-                        <Link href="/chinh-sach" className="hover:text-white transition-colors">Chính sách bảo mật</Link>
-                        <Link href="/chinh-sach" className="hover:text-white transition-colors">Điều khoản sử dụng</Link>
+
+                    <div className="flex flex-wrap items-center justify-center gap-6">
+                        {/* Social Icons */}
+                        <div className="flex gap-3">
+                            <a href="#" className="w-9 h-9 rounded-full border border-white/80 flex items-center justify-center hover:bg-white/20 transition-all group">
+                                <svg className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#" className="w-9 h-9 rounded-full border border-white/80 flex items-center justify-center hover:bg-white/20 transition-all group">
+                                <svg className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                            <a href="#" className="w-9 h-9 rounded-full border border-white/80 flex items-center justify-center hover:bg-white/20 transition-all group">
+                                <svg className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        {/* Trust Badges */}
+                        <div className="flex items-center gap-4">
+                            {/* NCSC Badge */}
+                            <div className="relative w-[120px] h-[40px]">
+                                <Image
+                                    src="/image/trust/ncsc.png"
+                                    alt="NCSC Tín Nhiệm Mạng"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+
+                            {/* DMCA Badge */}
+                            <div className="relative w-[80px] h-[30px]">
+                                <Image
+                                    src="/image/trust/dmca.png"
+                                    alt="DMCA Protected"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+
+                            {/* Ministry of Industry and Trade Badge */}
+                            <div className="relative w-[110px] h-[40px]">
+                                <Image
+                                    src="/image/trust/bocongthuong.png"
+                                    alt="Bộ Công Thương"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

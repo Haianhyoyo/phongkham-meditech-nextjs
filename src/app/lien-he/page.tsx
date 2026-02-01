@@ -2,8 +2,31 @@
 
 import PageHeader from "@/components/ui/PageHeader";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function ContactPage() {
+    const [settings, setSettings] = useState<any>({});
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchSettings = async () => {
+            try {
+                const res = await fetch("/api/settings");
+                const data = await res.json();
+                const settingsObj = data.reduce((acc: any, curr: any) => {
+                    acc[curr.key] = curr.value;
+                    return acc;
+                }, {});
+                setSettings(settingsObj);
+            } catch (error) {
+                console.error("Failed to fetch settings", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchSettings();
+    }, []);
+
     const contactLinks = [
         {
             title: "Đặt lịch tư vấn",
@@ -34,6 +57,8 @@ export default function ContactPage() {
             color: "bg-orange-50 text-orange-600"
         }
     ];
+
+    if (loading) return null;
 
     return (
         <main className="bg-slate-50 min-h-screen">
@@ -79,7 +104,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-slate-900">Địa chỉ</h4>
-                                        <p className="text-slate-600">88 P. Láng Hạ, Láng Hạ, Đống Đa, Hà Nội</p>
+                                        <p className="text-slate-600">{settings.contact_address || "Đang cập nhật..."}</p>
                                     </div>
                                 </div>
 
@@ -89,7 +114,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-slate-900">Hotline</h4>
-                                        <p className="text-slate-600">1900 123 456</p>
+                                        <p className="text-slate-600">{settings.contact_phone || settings.hotline_247 || "Đang cập nhật..."}</p>
                                     </div>
                                 </div>
 
@@ -99,22 +124,26 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-slate-900">Email</h4>
-                                        <p className="text-slate-600">contact@meditech.vn</p>
+                                        <p className="text-slate-600">{settings.contact_email || "Đang cập nhật..."}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="h-[400px] w-full bg-slate-100 rounded-2xl overflow-hidden relative">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.113110940561!2d105.81524337604313!3d21.02816008780287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab70b8a1c0d1%3A0x8264d1a0c849177f!2zODggUC4gTzEgY-G6p3UsIEzDoW5nIEjhuqEsIMSQ4buRbmcgxJBhLCBIw6AgTk9pLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
+                            {settings.map_embed_url ? (
+                                <iframe
+                                    src={settings.map_embed_url}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            ) : (
+                                <div className="flex items-center justify-center h-full text-slate-400">Đang cập nhật bản đồ...</div>
+                            )}
                         </div>
                     </div>
                 </div>

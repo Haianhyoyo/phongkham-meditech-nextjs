@@ -1,4 +1,24 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function AdminDashboard() {
+    const [stats, setStats] = useState({
+        bookings: 0,
+        contacts: 0,
+        services: 0,
+        news: 0
+    });
+
+    useEffect(() => {
+        fetch("/api/admin/stats")
+            .then(res => res.json())
+            .then(data => {
+                if (!data.error) setStats(data);
+            })
+            .catch(err => console.error("Failed to fetch dashboard stats", err));
+    }, []);
+
     return (
         <div>
             <div className="mb-8">
@@ -7,20 +27,19 @@ export default function AdminDashboard() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {/* KPI Cards Placeholder */}
                 {[
-                    { title: "Đặt lịch mới", value: "12", icon: "calendar_today", color: "bg-blue-500" },
-                    { title: "Liên hệ mới", value: "5", icon: "mail", color: "bg-green-500" },
-                    { title: "Dịch vụ", value: "24", icon: "medical_services", color: "bg-purple-500" },
-                    { title: "Tin tức", value: "48", icon: "article", color: "bg-orange-500" },
+                    { title: "Đặt lịch mới", value: stats.bookings, icon: "calendar_today", color: "bg-blue-500" },
+                    { title: "Liên hệ mới", value: stats.contacts, icon: "mail", color: "bg-green-500" },
+                    { title: "Dịch vụ", value: stats.services, icon: "medical_services", color: "bg-purple-500" },
+                    { title: "Tin tức", value: stats.news, icon: "article", color: "bg-orange-500" },
                 ].map((item, index) => (
                     <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
-                        <div className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center text-white shadow-lg shadow-${item.color.replace('bg-', '')}/30`}>
+                        <div className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center text-white shadow-lg shadow-blue-500/20`}>
                             <span className="material-symbols-outlined">{item.icon}</span>
                         </div>
                         <div>
                             <p className="text-sm font-medium text-slate-500">{item.title}</p>
-                            <p className="text-2xl font-bold text-slate-800">{item.value}</p>
+                            <p className="text-2xl font-bold text-slate-800 tracking-tight">{item.value}</p>
                         </div>
                     </div>
                 ))}

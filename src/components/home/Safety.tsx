@@ -7,7 +7,7 @@ export default function Safety() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-green-50 text-green-700 font-bold text-sm border border-green-200">
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary font-bold text-sm border border-primary/20">
                             <span className="flex items-center gap-2">
                                 <span className="material-symbols-outlined text-base">verified_user</span>
                                 Cam kết an toàn tuyệt đối
@@ -44,7 +44,7 @@ export default function Safety() {
                             </li>
                         </ul>
                         <div className="pt-4">
-                            <Link href="/ve-chung-toi" className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-700 transition-colors">
+                            <Link href="/ve-chung-toi" className="inline-flex items-center gap-2 text-primary font-bold hover:text-primary-dark transition-colors">
                                 Xem giấy phép hoạt động <span className="material-symbols-outlined">description</span>
                             </Link>
                         </div>
@@ -57,7 +57,7 @@ export default function Safety() {
                                     <span className="material-symbols-outlined text-6xl text-slate-300 mb-4">badge</span>
                                     <p className="text-slate-500 font-medium">Hình ảnh Giấy phép Hoạt động / Chứng chỉ</p>
                                     {/* <p className="text-xs text-slate-400 mt-2">(Vui lòng cập nhật hình ảnh thực tế)</p> */}
-                                         <img src="/image/bangcap.jpg" alt="Giấy phép hoạt động" />
+                                    <img src="/image/bangcap.jpg" alt="Giấy phép hoạt động" />
                                 </div>
                             </div>
                             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100 max-w-xs">

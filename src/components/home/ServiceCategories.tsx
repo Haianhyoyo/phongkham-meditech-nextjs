@@ -6,7 +6,7 @@ export default function ServiceCategories() {
         <section className="py-24 bg-slate-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-primary font-bold tracking-widest uppercase text-sm">Dịch vụ toàn diện</h2>
+                    <h2 className="text-primary font-bold tracking-widest uppercase text-sm">Dịch vụ đặc biệt</h2>
                     <h3 className="text-4xl font-display font-bold text-slate-900">Giải Pháp Thẩm Mỹ Hoàn Hảo</h3>
                     <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
                 </div>

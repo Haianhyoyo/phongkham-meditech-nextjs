@@ -6,6 +6,7 @@ import { doctors } from "@/data/doctors";
 
 function BookingFormContent() {
     const searchParams = useSearchParams();
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
@@ -42,12 +43,44 @@ function BookingFormContent() {
         }));
     }, [searchParams]);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ trong thời gian sớm nhất.");
-        console.log("Form data:", formData);
-        // Reset form
-        setFormData({ name: "", phone: "", service: "", date: "", note: "", doctor: "" });
+        setLoading(true);
+
+        try {
+            // Combine extra info into message for storage
+            const fullMessage = `
+Ngày dự kiến: ${formData.date}
+Bác sĩ: ${formData.doctor || "Chưa chọn"}
+Ghi chú: ${formData.note || "Không có"}
+            `.trim();
+
+            const res = await fetch("/api/bookings", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    phone: formData.phone,
+                    service: formData.service || "Khám tư vấn",
+                    message: fullMessage,
+                }),
+            });
+
+            if (res.ok) {
+                alert("Cảm ơn bạn đã đăng ký! Meditech sẽ liên hệ trong thời gian sớm nhất.");
+                setFormData({ name: "", phone: "", service: "", date: "", note: "", doctor: "" });
+            } else {
+                const data = await res.json();
+                alert(data.error || "Có lỗi xảy ra, vui lòng thử lại sau.");
+            }
+        } catch (error) {
+            console.error("Booking error:", error);
+            alert("Lỗi kết nối máy chủ. Vui lòng thử lại sau hoặc liên hệ Hotline.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -138,9 +171,10 @@ function BookingFormContent() {
 
                 <button
                     type="submit"
-                    className="w-full bg-primary text-white font-bold text-lg py-4 rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 active:scale-95"
+                    disabled={loading}
+                    className={`w-full bg-primary text-white font-bold text-lg py-4 rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 active:scale-95 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
-                    Gửi Đăng Ký
+                    {loading ? "Đang gửi đăng ký..." : "Gửi Đăng Ký"}
                 </button>
             </form>
         </div>

@@ -63,16 +63,16 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 shadow-md">
             {/* Top Bar - White */}
-            <div className="bg-white py-2">
+            <div className="bg-white py-1">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row justify-between items-center gap-4">
                     {/* Logo Section */}
                     <Link href="/" className="flex items-center group no-underline">
-                        <div className="relative w-52 h-20 lg:w-[380px] lg:h-32 shrink-0 -my-2 lg:-my-4">
+                        <div className="relative w-56 h-20 lg:w-[380px] lg:h-32 shrink-0">
                             <Image
                                 src="/image/logo-meditech-ultra.png"
                                 alt="MEDITECH Logo"
                                 fill
-                                className="object-contain object-left scale-[1.9] lg:scale-[2.2] origin-left"
+                                className="object-contain object-left scale-[2.0] lg:scale-[2.6] origin-left"
                                 priority
                             />
                         </div>
@@ -85,7 +85,7 @@ export default function Navbar() {
                             <span>TP.HCM: 123 Nguyễn Du - Q.1</span>
                         </div>
                         <div className="text-xl font-bold font-sans text-primary tracking-wide">
-                            088 989 5555 - 024 3872 3872
+                            <a href="tel:0889895555" className="hover:text-primary-dark transition-colors">088 989 5555</a> - <a href="tel:02438723872" className="hover:text-primary-dark transition-colors">024 3872 3872</a>
                         </div>
                         <div className="flex items-center gap-4 text-xs font-medium mt-1 text-slate-600">
                             <Link href="/khach-hang" className="flex items-center gap-1 hover:text-primary transition-colors">
@@ -122,10 +122,10 @@ export default function Navbar() {
                         {/* Main Navigation */}
                         <div className="flex space-x-8 font-bold text-sm uppercase tracking-wide">
                             {navLinks.map((link) => (
-                                <div key={link.name} className="relative group">
+                                <div key={link.name} className="relative group" suppressHydrationWarning={true}>
                                     <Link
                                         href={link.href}
-                                        className={`flex items-center gap-1 transition-colors py-4 px-2 border-b-2 ${isActive(link.href)
+                                        className={`flex items-center gap-1 transition-colors py-2 px-2 border-b-2 ${isActive(link.href)
                                             ? "text-white border-accent"
                                             : "text-blue-100 border-transparent hover:text-white hover:border-blue-200"
                                             }`}
@@ -136,8 +136,8 @@ export default function Navbar() {
 
                                     {/* Dropdown Menu */}
                                     {link.children && (
-                                        <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
-                                            <div className="p-2 flex flex-col">
+                                        <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50" suppressHydrationWarning={true}>
+                                            <div className="p-2 flex flex-col" suppressHydrationWarning={true}>
                                                 {link.children.map((child) => (
                                                     <Link
                                                         key={child.name}
@@ -170,7 +170,7 @@ export default function Navbar() {
                     <div className="flex flex-col h-full border-t border-slate-100">
                         <div className="flex-1 overflow-y-auto p-4 space-y-2">
                             {navLinks.map((link) => (
-                                <div key={link.name}>
+                                <div key={link.name} suppressHydrationWarning={true}>
                                     <div className="flex items-center justify-between">
                                         <Link
                                             href={link.href}

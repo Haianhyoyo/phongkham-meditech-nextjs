@@ -4,12 +4,28 @@ import PageHeader from "@/components/ui/PageHeader";
 import CTASection from "@/components/ui/CTASection";
 import Image from "next/image";
 import Link from "next/link";
-
-import { newsData } from "@/data/news";
-
-const news = newsData;
+import { useState, useEffect } from "react";
 
 export default function NewsPage() {
+    const [news, setNews] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchNews = async () => {
+            try {
+                const res = await fetch("/api/news");
+                const data = await res.json();
+                setNews(data);
+            } catch (error) {
+                console.error("Failed to fetch news", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchNews();
+    }, []);
+
+    if (loading) return null;
     return (
         <main>
             <PageHeader
@@ -48,13 +64,13 @@ export default function NewsPage() {
                                     <div className="p-6">
                                         <div className="flex items-center gap-2 text-xs text-slate-500 mb-3">
                                             <span className="material-symbols-outlined text-sm">calendar_month</span>
-                                            {item.date}
+                                            {new Date(item.createdAt).toLocaleDateString('vi-VN')}
                                         </div>
                                         <h3 className="font-display font-bold text-xl text-slate-900 line-clamp-2 group-hover:text-primary transition-colors mb-3">
                                             {item.title}
                                         </h3>
                                         <p className="text-slate-600 text-sm line-clamp-3 mb-4">
-                                            Tìm hiểu thêm về {item.title.toLowerCase()} để có được vẻ đẹp hoàn hảo và sự tự tin trong cuộc sống.
+                                            {item.summary || `Tìm hiểu thêm về ${item.title.toLowerCase()}...`}
                                         </p>
                                         <div className="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                                             Đọc tiếp <span className="material-symbols-outlined text-sm">arrow_forward</span>

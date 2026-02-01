@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
     try {
         const body = await request.json();
-        const { title, slug, type, category, shortDesc, content, images, price, recoveryTime } = body;
+        const { title, slug, type, category, description, content, image, price, recoveryTime } = body;
 
         // Basic validation
         if (!title || !slug || !type) {
@@ -55,9 +55,9 @@ export async function POST(request: Request) {
                 slug,
                 type,
                 category,
-                shortDesc,
+                description,
                 content,
-                images,
+                image,
                 price,
                 recoveryTime,
                 isActive: true,

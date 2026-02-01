@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  serverExternalPackages: ['@prisma/client', 'bcrypt'],
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push('@prisma/client', 'prisma', '@next-auth/prisma-adapter');
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

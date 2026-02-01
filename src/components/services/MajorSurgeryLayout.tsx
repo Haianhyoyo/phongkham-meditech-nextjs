@@ -7,94 +7,156 @@ export default function MajorSurgeryLayout({ service }: { service: ServiceData }
     if (!service) return null;
 
     return (
-        <div className="animate-fade-in">
-            {/* Header */}
-            <div className="relative bg-slate-900 py-24 text-white overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-40">
-                    <Image src={service.realImages[0]} alt={service.name} fill className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
+        <div className="animate-fade-in bg-white pb-20">
+            {/* Main Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+                {/* Breadcrumbs */}
+                <div className="flex items-center gap-1 text-[13px] text-slate-400 mb-8 border-b border-slate-100 pb-4">
+                    <Link href="/" className="hover:text-blue-500 transition-colors">
+                        <span className="material-symbols-outlined text-sm align-middle">home</span>
+                    </Link>
+                    <span className="mx-2 text-slate-300">›</span>
+                    <Link href="/dich-vu" className="hover:text-blue-500 transition-colors">Dịch vụ</Link>
+                    <span className="mx-2 text-slate-300">›</span>
+                    <Link href="/dich-vu/dai-phau" className="hover:text-blue-500 transition-colors">Đại phẫu</Link>
+                    <span className="mx-2 text-slate-300">›</span>
+                    <span className="text-slate-600 font-medium">{service.name}</span>
                 </div>
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-                        <Link href="/" className="hover:text-white">Trang chủ</Link> /
-                        <Link href="/dich-vu/dai-phau" className="hover:text-white">Đại phẫu</Link> /
-                        <span className="text-white font-medium">{service.name}</span>
-                    </div>
-                    <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent font-bold text-xs uppercase tracking-wider border border-accent/20 mb-6">{service.category}</span>
-                    <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">{service.name}</h1>
-                    <p className="text-xl text-slate-300 max-w-2xl leading-relaxed mb-8">{service.shortDesc}</p>
-                    <div className="flex gap-4">
-                        <Link href="#booking" className="bg-accent text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition-all shadow-lg shadow-yellow-500/20">
-                            Tư vấn chuyên sâu
-                        </Link>
-                    </div>
-                </div>
-            </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                {/* Indication & Analysis */}
-                <div className="grid lg:grid-cols-2 gap-16 mb-24">
-                    <div className="space-y-6">
-                        <h2 className="text-2xl font-bold text-slate-900 border-b-2 border-primary inline-block pb-2">Chỉ định chuyên môn</h2>
-                        <p className="text-slate-700 leading-relaxed text-lg bg-orange-50 p-6 rounded-xl border border-orange-100 italic">
-                            <span className="material-symbols-outlined align-middle mr-2 text-orange-500">warning</span>
-                            {service.profIndication}
-                        </p>
-                    </div>
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-4">
-                            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary">
-                                <Image src="/image/bacsi.jpg" width={64} height={64} alt="Giám đốc chuyên môn" className="object-cover" />
+                <div className="grid lg:grid-cols-12 gap-12">
+                    {/* LEFT COLUMN - CONTENT (8/12) */}
+                    <div className="lg:col-span-8">
+                        <header className="mb-10">
+                            <div className="flex gap-1 mb-4">
+                                {[1, 2, 3, 4, 5].map(i => (
+                                    <span key={i} className="material-symbols-outlined text-lg text-yellow-400" style={{ fontVariationSettings: "'FILL' 1" }}>
+                                        star
+                                    </span>
+                                ))}
+                                <span className="text-[11px] text-slate-400 ml-2 italic">Rate this post</span>
                             </div>
-                            <div>
-                                <h2 className="text-2xl font-bold text-slate-900">Góc nhìn chuyên gia</h2>
-                                <div className="text-sm text-primary font-bold">BS. Tuệ Linh</div>
+
+                            <h1 className="text-4xl md:text-5xl font-display font-black text-[#1A1A1A] leading-tight mb-4">
+                                {service.name}
+                            </h1>
+
+                            <div className="text-[13px] text-slate-400 font-medium mb-8">
+                                1 Tháng một, 2026
                             </div>
-                        </div>
-                        <div className="relative bg-slate-50 p-8 rounded-3xl">
-                            <span className="absolute top-4 left-4 text-6xl text-slate-200 font-serif leading-none z-0">"</span>
-                            <p className="relative z-10 text-slate-600 leading-relaxed italic">
-                                {service.doctorAnalysis}
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                {/* Risks & Control - Critical Section */}
-                <div className="bg-slate-900 rounded-[2.5rem] p-10 md:p-16 text-white mb-24 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
-                    <div className="relative z-10">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-display font-bold">Quản Trị Rủi Ro & An Toàn</h2>
-                            <p className="text-slate-400 mt-2">Chúng tôi không giấu giếm rủi ro, chúng tôi kiểm soát nó.</p>
-                        </div>
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {service.risks?.map((risk, idx) => {
-                                const [title, desc] = risk.split(":");
-                                return (
-                                    <div key={idx} className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
-                                        <h4 className="font-bold text-accent mb-3 text-lg">{title}</h4>
-                                        <p className="text-slate-300 text-sm leading-relaxed">{desc}</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </div>
+                            <div className="text-lg text-[#333] leading-relaxed font-bold italic border-b border-slate-100 pb-8 mb-8">
+                                {service.shortDesc}
+                            </div>
+                        </header>
 
-                {/* Real Results */}
-                <div className="mb-16">
-                    <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Kết Quả Thay Đổi Cuộc Sống</h2>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {service.realImages.map((img, idx) => (
-                            <div key={idx} className="group relative h-[400px] rounded-3xl overflow-hidden shadow-xl">
-                                <Image src={img} alt="Kết quả đại phẫu" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                                <div className="absolute bottom-6 left-6 text-white font-bold text-lg">
-                                    Khách hàng {idx + 1}
+                        <div className="prose prose-slate max-w-none space-y-12">
+                            {/* Professional Indication Section */}
+                            <section>
+                                <h2 className="text-3xl font-display font-black text-[#1A1A1A] mb-6">
+                                    Chỉ định chuyên môn từ bác sĩ
+                                </h2>
+                                <div className="bg-orange-50/50 p-8 rounded-2xl border border-orange-100 mb-6 italic text-lg text-orange-900/80 font-bold">
+                                    "{service.profIndication}"
                                 </div>
+                                <div className="flex items-center gap-4 mb-6">
+                                    <Image src="/image/bacsi.jpg" width={40} height={40} alt="Doctor" className="rounded-full shadow-sm" />
+                                    <div>
+                                        <div className="text-xs font-black text-blue-600 uppercase">Phân tích chuyên sâu:</div>
+                                        <div className="text-sm font-bold text-slate-800">BS. Tuệ Linh</div>
+                                    </div>
+                                </div>
+                                <p className="text-slate-600 leading-relaxed text-lg">
+                                    {service.doctorAnalysis}
+                                </p>
+                            </section>
+
+                            <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
+                                <Image
+                                    src={service.realImages[0]}
+                                    alt={service.name}
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
-                        ))}
+
+                            {/* Risks & Control Section */}
+                            <section>
+                                <h2 className="text-3xl font-display font-black text-[#1A1A1A] mb-6 uppercase tracking-tight">
+                                    Quản trị rủi ro & An toàn
+                                </h2>
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {service.risks?.map((risk, idx) => {
+                                        const [title, desc] = risk.split(":");
+                                        return (
+                                            <div key={idx} className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                                <h4 className="font-bold text-slate-800 mb-2 text-lg uppercase tracking-tight">{title}</h4>
+                                                <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </section>
+
+                            {/* Real Results */}
+                            <section className="bg-slate-50 p-10 rounded-3xl border border-slate-100">
+                                <h2 className="text-3xl font-display font-black text-[#1A1A1A] mb-12 text-center">
+                                    Kết quả thay đổi diện mạo
+                                </h2>
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    {service.realImages.map((img, idx) => (
+                                        <div key={idx} className="space-y-4">
+                                            <div className="text-center">
+                                                <span className="text-[10px] font-sans font-black tracking-widest text-[#D4AF37] uppercase">
+                                                    THỰC TẾ KHÁCH HÀNG #{idx + 1}
+                                                </span>
+                                            </div>
+                                            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                                                <Image src={img} alt="Kết quả" fill className="object-cover" />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    {/* RIGHT COLUMN - SIDEBAR */}
+                    <div className="lg:col-span-4">
+                        <div className="sticky top-28">
+                            <div className="bg-blue-50/30 p-8 md:p-10 rounded-[2rem] border border-blue-100 shadow-sm">
+                                <h3 className="text-2xl font-display font-black text-[#1A1A1A] mb-2">Đăng ký tư vấn</h3>
+                                <p className="text-[13px] text-slate-500 mb-8 leading-relaxed">
+                                    Để lại thông tin chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất !!!
+                                </p>
+
+                                <form className="space-y-6">
+                                    <div className="space-y-2">
+                                        <label className="text-[13px] font-bold text-[#333]">Họ và tên <span className="text-red-500">*</span></label>
+                                        <div className="relative">
+                                            <input type="text" placeholder="Nhập họ và tên" className="w-full bg-white border-b border-slate-300 py-3 pr-10 focus:border-[#0056A4] outline-none text-[13px]" />
+                                            <span className="material-symbols-outlined absolute right-0 top-3 text-slate-400">person</span>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-[13px] font-bold text-[#333]">Số điện thoại <span className="text-red-500">*</span></label>
+                                        <div className="relative">
+                                            <input type="tel" placeholder="Nhập số điện thoại" className="w-full bg-white border-b border-slate-300 py-3 pr-10 focus:border-[#0056A4] outline-none text-[13px]" />
+                                            <span className="material-symbols-outlined absolute right-0 top-3 text-slate-400">call</span>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-[13px] font-bold text-[#333]">Nội dung</label>
+                                        <div className="relative">
+                                            <input type="text" placeholder="Khách hàng nhắn tin" className="w-full bg-white border-b border-slate-300 py-3 pr-10 focus:border-[#0056A4] outline-none text-[13px]" />
+                                            <span className="material-symbols-outlined absolute right-0 top-3 text-slate-400">edit_note</span>
+                                        </div>
+                                    </div>
+                                    <button className="w-full bg-[#0056A4] hover:bg-[#004482] text-white py-4 rounded-xl font-sans font-black text-xs uppercase tracking-widest transition-all shadow-lg shadow-blue-900/10">
+                                        GỬI TIN NHẮN
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

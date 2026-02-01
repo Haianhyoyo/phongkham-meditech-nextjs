@@ -11,6 +11,7 @@ const menuItems = [
     { name: "Bác sĩ", href: "/admin/doctors", icon: "stethoscope" }, // Using a generic icon if doctor isn't available
     { name: "Tin tức", href: "/admin/news", icon: "article" },
     { name: "Ưu đãi", href: "/admin/promotions", icon: "campaign" },
+    { name: "Quản lý Trang chủ", href: "/admin/showcase", icon: "home_app_logo" },
     { name: "Đánh giá", href: "/admin/reviews", icon: "reviews" },
     { name: "Cài đặt chung", href: "/admin/settings", icon: "settings" },
 ];
@@ -37,8 +38,8 @@ export default function Sidebar() {
                                 <Link
                                     href={item.href}
                                     className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive
-                                            ? "bg-primary text-white"
-                                            : "text-slate-400 hover:bg-slate-800 hover:text-white"
+                                        ? "bg-primary text-white"
+                                        : "text-slate-400 hover:bg-slate-800 hover:text-white"
                                         }`}
                                 >
                                     <span className="material-symbols-outlined">{item.icon}</span>

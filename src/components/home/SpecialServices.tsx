@@ -1,30 +1,38 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function SpecialServices() {
-    const services = [
-        {
-            title: "Dịch vụ cấp cứu 24/7",
-            description: "Đội ngũ y bác sĩ trực 24/7, sẵn sàng hỗ trợ và xử lý các tình huống khẩn cấp",
-            icon: "emergency",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDTq53YoRuhq7-Sobqq89y_cKY4YHrFSffggipJ94fRkGVQ9NorcBzdKYLL6l6KDJSESgQfp4CyZNYLZs3n2iUU5X6c_S6VZt2rpO3g-rEGP6NvyXSxw6jFcD1hi6fESiYO6Weam1a3YjKSHA9Hiz2VEsMkMNF05_pLJU0GmjeRW1nZQtwPAZtD89s1GzQxRb0yFECEFr5BNrFUW_1BreDQAvZatHeuEdc4gl32xbGgTPOJV126vTmsinEgiuVE0rtk-YnvUwkn3Q",
-            link: "/lien-he"
-        },
-        {
-            title: "Khu khám VIP",
-            description: "Không gian riêng tư, sang trọng với dịch vụ chăm sóc đặc biệt dành cho khách hàng VIP",
-            icon: "diamond",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg",
-            link: "/dat-lich"
-        },
-        {
-            title: "Tư vấn & Điều trị chuyên sâu",
-            description: "Phác đồ điều trị cá nhân hóa, theo dõi sát sao từng giai đoạn để đạt hiệu quả tối ưu",
-            icon: "psychology",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBT0y2Pb0pw0Zzb5RQzdUirmvXQ5YjcNmiczeoiP9zQJ5KncrCMsoxmu0W9nqQLqWErNuh2U8u9oehiS_DHSkIGsv3p3OenHDZqvn_5FVSo0-FBygfgcNAxOY7qmyPohIjZnWrB6lmnzWrxnlyagcC3F0ZcVuuTNcJt_96mhd65If8Vz-rwXUjQZfUobcrHJVNKkeBfc3mZNtbE4cufCVyQv4HvytBx7hduDV6Myqw66-2EC5rk3r0EFWbkuQ7899r-sE_ahZsZHA",
-            link: "/chuyen-gia"
-        }
-    ];
+    const [services, setServices] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchServices = async () => {
+            try {
+                const res = await fetch("/api/showcase?type=SPECIAL_SERVICE");
+                const data = await res.json();
+                if (Array.isArray(data)) {
+                    setServices(data.map(item => ({
+                        id: item.id,
+                        title: item.title,
+                        description: item.description,
+                        image: item.image,
+                        link: item.link || "/dat-lich",
+                        icon: item.metadata ? JSON.parse(item.metadata).icon : "medical_services"
+                    })));
+                }
+            } catch (error) {
+                console.error("Failed to fetch special services", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchServices();
+    }, []);
+
+    if (loading) return null;
 
     return (
         <section className="py-20 bg-white">

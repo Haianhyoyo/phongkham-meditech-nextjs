@@ -107,7 +107,7 @@ export const newsData: NewsItem[] = [
         title: "Quy trình chăm sóc da chuẩn y khoa tại nhà",
         category: "Chăm sóc da",
         date: "05 Tháng 11, 2023",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDyKfYe5R7nL12rlD-FR-SD0OMS8iFKl60Ihar2_RXNStVsLTquAw92nYPg9IIT4Ci5959ti3b09PXCdht9nf4AqmL1RKGABqcCL4fDg5EFTdW31WMOnnbZaLGQTbtWy7c_uhbppbBC7dpKWHs_cX-aL7-o3X0DZK5tLXCBsB7l6lo8sRE_jZtGlVvT3EFRA3iGlvMjE5XJPrYZYfILJR5GMbsJtv_SUJOmiBF1uLeNz-pS3Imlmnj1KzTMW0Cyl_62VsCb_aj3vA",
+        image: "/image/CK/mat.png",
         slug: "cham-soc-da-chuan-y-khoa",
         description: "Các bước chăm sóc da cơ bản và nâng cao giúp bạn sở hữu làn da khỏe đẹp như đi spa.",
         content: `
@@ -129,6 +129,96 @@ export const newsData: NewsItem[] = [
                 <li>Serum đặc trị (Retinol, BHA, AHA...)</li>
                 <li>Kem dưỡng ẩm</li>
             </ol>
+        `
+    },
+    {
+        id: "7",
+        title: "Virus Nipah là gì? Triệu chứng và cách phòng ngừa lây nhiễm",
+        category: "Tin tức",
+        date: "31 Tháng 01, 2026",
+        image: "/image/tt1.jpg",
+        slug: "virus-nipah-la-gi",
+        description: "Virus Nipah gây bệnh truyền nhiễm có tỷ lệ tử vong từ 40%-75%, đồng thời gây viêm não cấp và hôn mê chỉ sau 24-48 giờ.",
+        content: `
+            <p>Virus Nipah (NiV) là một loại virus lây truyền từ động vật sang người, gây ra các đợt bùng phát nghiêm trọng với tỷ lệ tử vong cao. Đây là một trong những loại virus nằm trong danh sách ưu tiên theo dõi của Tổ chức Y tế Thế giới (WHO).</p>
+            <h3>1. Nguồn lây nhiễm</h3>
+            <p>Vật chủ tự nhiên của virus Nipah là loài dơi ăn quả. Virus có thể lây sang người qua tiếp xúc trực tiếp với động vật bị nhiễm bệnh (như lợn, dơi) hoặc tiêu thụ thực phẩm bị ô nhiễm chất bài tiết của động vật.</p>
+            <h3>2. Triệu chứng lâm sàng</h3>
+            <p>Các triệu chứng thường xuất hiện sau 4-14 ngày tiếp xúc, bao gồm sốt, đau đầu, ho, đau họng và khó thở. Trong các trường hợp nặng, bệnh nhân có thể tiến triển thành viêm nhận cấp tính, gây buồn ngủ, lú lẫn và hôn mê.</p>
+            <h3>3. Cách phòng ngừa</h3>
+            <p>Hiện chưa có vaccine phòng ngừa virus Nipah cho người. Các biện pháp phòng ngừa chủ yếu dựa vào vệ sinh cá nhân, tránh tiếp xúc với dơi và các động vật nhiễm bệnh, đồng thời không ăn các loại quả bị dơi cắn/ăn dở.</p>
+        `
+    },
+    {
+        id: "8",
+        title: "Tia X là gì? Ứng dụng lâm sàng, lợi ích trong đời sống",
+        category: "Kiến thức",
+        date: "30 Tháng 01, 2026",
+        image: "/image/tt2.jpg",
+        slug: "tia-x-la-gi",
+        description: "Tia X là một loại bức xạ điện từ có năng lượng cao, đóng vai trò quan trọng trong việc chẩn đoán hình ảnh hiện đại.",
+        content: `
+            <p>Tia X, còn được gọi là tia Röntgen, là một dạng bức xạ điện từ có khả năng đâm xuyên qua các vật thể rắn, bao gồm cả mô cơ thể người. Kể từ khi được phát hiện vào năm 1895, tia X đã làm thay đổi hoàn toàn nền y học thế giới.</p>
+            <h3>1. Ứng dụng trong y tế</h3>
+            <p>Ứng dụng phổ biến nhất của tia X là chụp X-quang để kiểm tra gãy xương, các vấn đề về răng miệng hoặc bệnh lý ở phổi. Ngoài ra, tia X còn được sử dụng trong chụp cắt lớp vi tính (CT Scan) để cung cấp hình ảnh chi tiết về các cơ quan nội tạng.</p>
+            <h3>2. Lợi ích vượt trội</h3>
+            <p>Tia X giúp bác sĩ "nhìn thấu" bên trong cơ thể mà không cần phẫu thuật xâm lấn, giúp phát hiện sớm các bệnh lý nguy hiểm như ung thư, viêm nhiễm hoặc các vật thể lạ.</p>
+            <h3>3. Lưu ý về an toàn</h3>
+            <p>Mặc dù tia X mang lại lợi ích to lớn, việc tiếp xúc quá mức có thể gây hại cho tế bào. Do đó, các quy trình chụp X-quang luôn được thực hiện với liều lượng bức xạ thấp nhất có thể và được kiểm soát chặt chẽ.</p>
+        `
+    },
+    {
+        id: "9",
+        title: "Vôi hóa tinh hoàn có nguy hiểm không? Chữa trị thế nào?",
+        category: "Sức khỏe nam giới",
+        date: "29 Tháng 01, 2026",
+        image: "/image/tt3.jpg",
+        slug: "voi-hoa-tinh-hoan",
+        description: "Vôi hóa tinh hoàn là tình trạng xuất hiện các nốt canxi nhỏ trong nhu mô tinh hoàn, thường được phát hiện qua siêu âm.",
+        content: `
+            <p>Vôi hóa tinh hoàn là một hiện tượng khá phổ biến khi các tinh thể canxi lắng đọng bên trong các ống sinh tinh. Tình trạng này thường không gây đau đớn và chỉ được phát hiện tình cờ khi người bệnh đi siêu âm kiểm tra sức khỏe.</p>
+            <h3>1. Nguyên nhân gây vôi hóa</h3>
+            <p>Có nhiều nguyên nhân dẫn đến vôi hóa tinh hoàn, bao gồm tiền sử viêm nhiễm, chấn thương, hoặc các rối loạn bẩm sinh. Một số trường hợp có thể liên quan đến tình trạng lưu thông máu kém tại tinh hoàn.</p>
+            <h3>2. Mức độ nguy hiểm</h3>
+            <p>Đa số các trường hợp vôi hóa nhẹ là lành tính và không ảnh hưởng đến chức năng sinh sản. Tuy nhiên, nếu vôi hóa lan rộng (Microlithiasis), nó có thể là dấu hiệu cảnh báo nguy cơ tăng cao đối với các khối u tinh hoàn.</p>
+            <h3>3. Phương pháp điều trị</h3>
+            <p>Hiện nay không có phương pháp xử lý trực tiếp các nốt vôi hóa. Bác sĩ thường khuyến cáo bệnh nhân tự kiểm tra và thực hiện siêu âm định kỳ hàng năm để theo dõi sự biến đổi của các nốt vôi hóa và nhu mô tinh hoàn.</p>
+        `
+    },
+    {
+        id: "10",
+        title: "Chụp X-quang viêm phổi: Quy trình, lợi ích và lưu ý khi thực hiện",
+        category: "Chẩn đoán hình ảnh",
+        date: "28 Tháng 01, 2026",
+        image: "/image/1.jpg",
+        slug: "chup-xquang-viem-phoi",
+        description: "Chụp X-quang phổi là kỹ thuật đầu tay giúp chẩn đoán nhanh chóng và chính xác tình trạng viêm phổi.",
+        content: `
+            <p>Viêm phổi là tình trạng nhiễm trùng các túi khí trong phổi, có thể gây nguy hiểm nếu không được điều trị kịp thời. Chụp X-quang lồng ngực là phương pháp cận lâm sàng cơ bản và nhanh chóng nhất để xác định tổn thương.</p>
+            <h3>1. Hình ảnh viêm phổi trên X-quang</h3>
+            <p>Khi bị viêm phổi, các vùng bị nhiễm trùng sẽ tích tụ dịch và mủ, ngăn cản tia X đi qua và tạo nên những vùng màu trắng (đám mờ) trên phim chụp, giúp bác sĩ xác định vị trí và mức độ nghiêm trọng của ổ viêm.</p>
+            <h3>2. Quy trình thực hiện</h3>
+            <p>Bệnh nhân sẽ được hướng dẫn đứng trước tấm cảm biến, hít sâu và nín thở trong vài giây để hình ảnh phổi được rõ nét nhất. Quy trình diễn ra rất nhanh, chỉ mất khoảng 5-10 phút.</p>
+            <h3>3. Những lưu ý quan trọng</h3>
+            <p>Bệnh nhân cần tháo bỏ các vật dụng kim loại ở vùng ngực như dây chuyền, khuy áo kim loại. Phụ nữ mang thai cần thông báo cho bác sĩ để được cân nhắc các biện pháp bảo vệ thai nhi khỏi bức xạ.</p>
+        `
+    },
+    {
+        id: "11",
+        title: "Nhiễm trùng mi mắt sau tiêm tan filler",
+        category: "Thẩm mỹ an toàn",
+        date: "27 Tháng 01, 2026",
+        image: "/image/2.jpg",
+        slug: "nhiem-trung-mi-mat",
+        description: "Tiêm tan filler là thủ thuật nhằm loại bỏ chất làm đầy không mong muốn, nhưng nếu không đảm bảo vô trùng có thể dẫn đến nhiễm trùng.",
+        content: `
+            <p>Tiêm tan filler (Hyaluronidase) được xem là "liều thuốc giải" cho các trường hợp tiêm filler bị hỏng hoặc lỗi. Tuy nhiên, bất kỳ thủ thuật xâm lấn nào cũng tiềm ẩn rủi ro nếu không được thực hiện bởi chuyên gia và trong môi trường vô trùng.</p>
+            <h3>1. Dấu hiệu nhiễm trùng</h3>
+            <p>Sau khi tiêm tan, nếu vùng mi mắt xuất hiện tình trạng sưng tấy đỏ kéo dài, đau nhức tăng dần, cảm giác nóng rát hoặc có dịch mủ, đó là dấu hiệu cảnh báo nhiễm trùng da và mô mềm.</p>
+            <h3>2. Nguyên nhân phổ biến</h3>
+            <p>Nguyên nhân thường gặp nhất là do kỹ thuật tiêm không đảm bảo vệ sinh, sử dụng thuốc tan filler kém chất lượng hoặc chăm sóc sau tiêm sai cách gây nhiễm khuẩn từ môi trường bên ngoài.</p>
+            <h3>3. Cách xử lý kịp thời</h3>
+            <p>Khi có dấu hiệu bất thường, bệnh nhân tuyệt đối không tự ý mua thuốc bôi hoặc chườm nóng/lạnh. Cần đến ngay cơ sở y tế chuyên khoa để được bác sĩ thăm khám, sử dụng kháng sinh và các biện pháp can thiệp chuyên sâu để tránh biến chứng hoại tử hoặc ảnh hưởng đến thị lực.</p>
         `
     }
 ];

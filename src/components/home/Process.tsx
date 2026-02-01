@@ -32,7 +32,7 @@ export default function Process() {
                         <p className="text-slate-600 text-lg leading-relaxed">
                             Mọi quy trình làm đẹp tại phòng khám đều tuân thủ nghiêm ngặt các tiêu chuẩn an toàn của Bộ Y Tế, giúp khách hàng hoàn toàn yên tâm khi gửi gắm nhan sắc.
                         </p>
-                        <button className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                        <button className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-primary-dark transition-all shadow-lg shadow-primary/30 flex items-center gap-2">
                             Xem chi tiết quy trình <span className="material-symbols-outlined">arrow_forward</span>
                         </button>
                     </div>

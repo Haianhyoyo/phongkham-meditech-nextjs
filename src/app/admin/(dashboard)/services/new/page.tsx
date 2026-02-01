@@ -170,6 +170,63 @@ export default function NewServicePage() {
                     ></textarea>
                 </div>
 
+                <div className="space-y-4">
+                    <label className="text-sm font-semibold text-slate-700">Hình ảnh dịch vụ</label>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {JSON.parse(formData.images || "[]").map((url: string, index: number) => (
+                            <div key={index} className="relative aspect-square rounded-lg overflow-hidden border border-slate-200 group">
+                                <img src={url} alt={`Service ${index}`} className="w-full h-full object-cover" />
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        const imgs = JSON.parse(formData.images);
+                                        imgs.splice(index, 1);
+                                        setFormData(prev => ({ ...prev, images: JSON.stringify(imgs) }));
+                                    }}
+                                    className="absolute top-1 right-1 bg-white/80 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity text-red-500 hover:bg-white shadow-sm"
+                                >
+                                    <span className="material-symbols-outlined text-sm">close</span>
+                                </button>
+                            </div>
+                        ))}
+                        <label className="aspect-square rounded-lg border-2 border-dashed border-slate-300 flex flex-col items-center justify-center cursor-pointer hover:border-primary hover:bg-slate-50 transition-all text-slate-500 hover:text-primary">
+                            <span className="material-symbols-outlined text-3xl">add_photo_alternate</span>
+                            <span className="text-xs mt-1 font-medium">Thêm ảnh</span>
+                            <input
+                                type="file"
+                                className="hidden"
+                                accept="image/*"
+                                multiple
+                                onChange={async (e) => {
+                                    const files = Array.from(e.target.files || []);
+                                    if (files.length === 0) return;
+
+                                    for (const file of files) {
+                                        const uploadData = new FormData();
+                                        uploadData.append("file", file);
+
+                                        try {
+                                            const res = await fetch("/api/upload", {
+                                                method: "POST",
+                                                body: uploadData
+                                            });
+                                            const data = await res.json();
+                                            if (data.url) {
+                                                const currentImgs = JSON.parse(formData.images || "[]");
+                                                currentImgs.push(data.url);
+                                                setFormData(prev => ({ ...prev, images: JSON.stringify(currentImgs) }));
+                                            }
+                                        } catch (err) {
+                                            console.error("Upload error", err);
+                                        }
+                                    }
+                                }}
+                            />
+                        </label>
+                    </div>
+                </div>
+
                 <div className="space-y-2">
                     <label className="text-sm font-semibold text-slate-700">Nội dung chi tiết</label>
                     <textarea

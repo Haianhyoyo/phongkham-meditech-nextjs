@@ -107,16 +107,65 @@ export default function NewPromotionPage() {
                     <p className="text-xs text-slate-500">Để trống nếu không dùng mã code.</p>
                 </div>
 
-                <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Ảnh banner (URL)</label>
-                    <input
-                        type="text"
-                        name="image"
-                        value={formData.image}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary outline-none"
-                        placeholder="https://..."
-                    />
+                <div className="space-y-4">
+                    <label className="text-sm font-semibold text-slate-700">Ảnh banner</label>
+                    <div className="flex flex-col gap-4">
+                        {formData.image && (
+                            <div className="relative aspect-[21/9] w-full rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
+                                <img
+                                    src={formData.image}
+                                    alt="Preview"
+                                    className="w-full h-full object-cover"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setFormData(prev => ({ ...prev, image: "" }))}
+                                    className="absolute top-2 right-2 bg-white/90 rounded-full p-1.5 shadow-md hover:bg-white text-red-500 transition-all"
+                                >
+                                    <span className="material-symbols-outlined text-lg">delete</span>
+                                </button>
+                            </div>
+                        )}
+                        <div className="flex gap-2">
+                            <input
+                                type="text"
+                                name="image"
+                                value={formData.image}
+                                onChange={handleChange}
+                                className="flex-1 px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary outline-none"
+                                placeholder="Tải lên hoặc nhập URL..."
+                            />
+                            <label className="cursor-pointer bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium border border-slate-300 transition-colors flex items-center gap-2 whitespace-nowrap">
+                                <span className="material-symbols-outlined text-sm">upload</span>
+                                Tải ảnh
+                                <input
+                                    type="file"
+                                    className="hidden"
+                                    accept="image/*"
+                                    onChange={async (e) => {
+                                        const file = e.target.files?.[0];
+                                        if (!file) return;
+
+                                        const uploadData = new FormData();
+                                        uploadData.append("file", file);
+
+                                        try {
+                                            const res = await fetch("/api/upload", {
+                                                method: "POST",
+                                                body: uploadData
+                                            });
+                                            const data = await res.json();
+                                            if (data.url) {
+                                                setFormData(prev => ({ ...prev, image: data.url }));
+                                            }
+                                        } catch (err) {
+                                            alert("Lỗi khi tải ảnh lên");
+                                        }
+                                    }}
+                                />
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="space-y-2">

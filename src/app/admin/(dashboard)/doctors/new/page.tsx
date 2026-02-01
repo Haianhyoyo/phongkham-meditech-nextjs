@@ -109,16 +109,67 @@ export default function NewDoctorPage() {
                     </div>
 
                     <div className="space-y-2 md:col-span-2">
-                        <label className="text-sm font-semibold text-slate-700">Ảnh đại diện (URL)</label>
-                        <input
-                            type="text"
-                            name="image"
-                            value={formData.image}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary outline-none"
-                            placeholder="https://..."
-                        />
-                        <p className="text-xs text-slate-500">Chức năng upload ảnh sẽ được cập nhật sau.</p>
+                        <label className="text-sm font-semibold text-slate-700">Ảnh đại diện</label>
+                        <div className="flex gap-4 items-start">
+                            {formData.image && (
+                                <div className="relative w-24 h-24 rounded-lg overflow-hidden border border-slate-200 bg-slate-50 flex-shrink-0">
+                                    <img
+                                        src={formData.image}
+                                        alt="Preview"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setFormData(prev => ({ ...prev, image: "" }))}
+                                        className="absolute top-1 right-1 bg-white/80 rounded-full p-0.5 shadow-sm hover:bg-white text-red-500"
+                                    >
+                                        <span className="material-symbols-outlined text-sm">close</span>
+                                    </button>
+                                </div>
+                            )}
+                            <div className="flex-1 space-y-3">
+                                <div className="flex gap-2">
+                                    <input
+                                        type="text"
+                                        name="image"
+                                        value={formData.image}
+                                        onChange={handleChange}
+                                        className="flex-1 px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary outline-none"
+                                        placeholder="Tải ảnh lên hoặc nhập URL: https://..."
+                                    />
+                                    <label className="cursor-pointer bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium border border-slate-300 transition-colors flex items-center gap-2 whitespace-nowrap">
+                                        <span className="material-symbols-outlined text-sm">upload</span>
+                                        Chọn ảnh
+                                        <input
+                                            type="file"
+                                            className="hidden"
+                                            accept="image/*"
+                                            onChange={async (e) => {
+                                                const file = e.target.files?.[0];
+                                                if (!file) return;
+
+                                                const uploadData = new FormData();
+                                                uploadData.append("file", file);
+
+                                                try {
+                                                    const res = await fetch("/api/upload", {
+                                                        method: "POST",
+                                                        body: uploadData
+                                                    });
+                                                    const data = await res.json();
+                                                    if (data.url) {
+                                                        setFormData(prev => ({ ...prev, image: data.url }));
+                                                    }
+                                                } catch (err) {
+                                                    alert("Lỗi khi tải ảnh lên");
+                                                }
+                                            }}
+                                        />
+                                    </label>
+                                </div>
+                                <p className="text-xs text-slate-500 italic">Lưu ý: Bạn có thể chọn file từ máy tính hoặc dán link ảnh trực tiếp.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
