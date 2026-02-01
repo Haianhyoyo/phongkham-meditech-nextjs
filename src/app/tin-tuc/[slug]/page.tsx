@@ -170,9 +170,11 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
                                     <p className="text-blue-100 text-sm mb-6 leading-relaxed">
                                         Đội ngũ chuyên gia hàng đầu luôn sẵn sàng hỗ trợ bạn 24/7.
                                     </p>
-                                    <button className="w-full bg-white text-blue-700 font-bold py-3 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
-                                        ĐẶT LỊCH HẸN NGAY
-                                    </button>
+                                    <Link href="/dat-lich" className="block w-full">
+                                        <button className="w-full bg-white text-blue-700 font-bold py-3 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+                                            ĐẶT LỊCH HẸN NGAY
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
