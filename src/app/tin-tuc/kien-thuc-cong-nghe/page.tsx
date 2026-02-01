@@ -1,14 +1,40 @@
 "use client";
 
 import PageHeader from "@/components/ui/PageHeader";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function KnowledgePage() {
+    const [articles, setArticles] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchArticles = async () => {
+            try {
+                const res = await fetch("/api/news");
+                const data = await res.json();
+                setArticles(data);
+            } catch (error) {
+                console.error("Failed to fetch articles", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchArticles();
+    }, []);
+
+    const knowledgeNews = articles.filter(a => a.category === "Kiến thức").slice(0, 3);
+    const techNews = articles.filter(a => a.category === "Công nghệ").slice(0, 4);
+
+    if (loading) return null;
+
     return (
         <main className="bg-slate-50 min-h-screen">
             <PageHeader
                 title="Kiến Thức & Công Nghệ"
                 description="Cập nhật những xu hướng thẩm mỹ mới nhất và công nghệ làm đẹp tiên tiến."
-                backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg"
+                backgroundImage="/image/banner.jpg"
             />
 
             <section className="py-20">
@@ -18,17 +44,21 @@ export default function KnowledgePage() {
                     <div className="mb-20">
                         <h2 className="text-2xl font-display font-bold text-slate-900 mb-8 border-l-4 border-primary pl-4">Kiến Thức Thẩm Mỹ</h2>
                         <div className="grid md:grid-cols-3 gap-8">
-                            {[1, 2, 3].map((val) => (
-                                <article key={val} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all group">
-                                    <div className="h-48 bg-slate-200 relative">
-                                        {/* Placeholder Image */}
-                                        <div className="absolute inset-0 flex items-center justify-center text-slate-400">Image {val}</div>
+                            {knowledgeNews.map((item) => (
+                                <Link key={item.id} href={`/tin-tuc/${item.slug}`} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all group">
+                                    <div className="h-48 bg-slate-200 relative overflow-hidden">
+                                        <Image
+                                            src={item.image || "/image/news/bg-news.jpg"}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-all"
+                                        />
                                     </div>
                                     <div className="p-6">
-                                        <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">7 Điều cần biết trước khi nâng mũi cấu trúc</h3>
-                                        <p className="text-slate-600 text-sm line-clamp-3">Phân tích chi tiết về các phương pháp, chất liệu sụn và những lưu ý quan trọng để có dáng mũi đẹp an toàn.</p>
+                                        <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">{item.title}</h3>
+                                        <p className="text-slate-600 text-sm line-clamp-3">{item.summary}</p>
                                     </div>
-                                </article>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -37,17 +67,21 @@ export default function KnowledgePage() {
                     <div className="mb-20">
                         <h2 className="text-2xl font-display font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">Công Nghệ Mới</h2>
                         <div className="grid md:grid-cols-2 gap-8">
-                            {[1, 2].map((val) => (
-                                <article key={val} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row h-full md:h-48 group">
-                                    <div className="h-48 md:w-1/3 bg-slate-200 relative shrink-0">
-                                        {/* Placeholder Image */}
-                                        <div className="absolute inset-0 flex items-center justify-center text-slate-400">Tech {val}</div>
+                            {techNews.map((item) => (
+                                <Link key={item.id} href={`/tin-tuc/${item.slug}`} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row h-full md:h-48 group">
+                                    <div className="h-48 md:w-1/3 bg-slate-200 relative shrink-0 overflow-hidden">
+                                        <Image
+                                            src={item.image || "/image/news/bg-news.jpg"}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-all"
+                                        />
                                     </div>
                                     <div className="p-6 flex flex-col justify-center">
-                                        <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">Công nghệ Plasma lạnh trong giảm sưng nề hậu phẫu</h3>
-                                        <p className="text-slate-600 text-sm line-clamp-2">Ứng dụng tia Plasma giúp diệt khuẩn, kích thích lành thương nhanh gấp 2 lần so với phương pháp thông thường.</p>
+                                        <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">{item.title}</h3>
+                                        <p className="text-slate-600 text-sm line-clamp-2">{item.summary}</p>
                                     </div>
-                                </article>
+                                </Link>
                             ))}
                         </div>
                     </div>

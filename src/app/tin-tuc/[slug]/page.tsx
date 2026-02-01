@@ -1,29 +1,52 @@
-import { newsData } from "@/data/news";
+import { prisma } from "@/lib/prisma";
 import PageHeader from "@/components/ui/PageHeader";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-    return newsData.map((item) => ({
+    const posts = await prisma.post.findMany({ select: { slug: true } });
+    return posts.map((item) => ({
         slug: item.slug,
     }));
 }
 
 export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {
     const slug = (await params).slug;
-    const article = newsData.find((item) => item.slug === slug);
-    const relatedNews = newsData.filter((item) => item.slug !== slug).slice(0, 5);
+
+    // Fetch article from DB
+    const article = await prisma.post.findUnique({
+        where: { slug }
+    });
 
     if (!article) {
         notFound();
     }
 
+    // Fetch related news mapping to current schema
+    const rawRelated = await prisma.post.findMany({
+        where: {
+            slug: { not: slug },
+            category: article.category
+        },
+        take: 5,
+        orderBy: { createdAt: 'desc' }
+    });
+
+    const relatedNews = rawRelated.map(item => ({
+        id: item.id,
+        title: item.title,
+        slug: item.slug,
+        image: item.image || "/image/news/bg-news.jpg",
+        date: new Date(item.createdAt).toLocaleDateString('vi-VN'),
+        category: item.category
+    }));
+
     return (
         <main className="bg-white">
             <PageHeader
                 title="Tin tức - Kiến thức"
-                description={article.category}
+                description={article.category || "Tin tức"}
                 backgroundImage={article.image || "/image/news/bg-news.jpg"}
             />
 
@@ -43,11 +66,11 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
                                 <div className="flex items-center gap-4 mb-4">
                                     <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded text-xs font-bold uppercase">
-                                        {article.category}
+                                        {article.category || "Tin tức"}
                                     </span>
                                     <span className="text-sm text-slate-400 flex items-center gap-1">
                                         <span className="material-symbols-outlined text-sm">calendar_today</span>
-                                        {article.date}
+                                        {new Date(article.createdAt).toLocaleDateString('vi-VN')}
                                     </span>
                                 </div>
 
@@ -57,7 +80,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
                                 <div className="relative aspect-video w-full mb-10 rounded-xl overflow-hidden shadow-lg border border-slate-100">
                                     <Image
-                                        src={article.image}
+                                        src={article.image || "/image/news/bg-news.jpg"}
                                         alt={article.title}
                                         fill
                                         className="object-cover"

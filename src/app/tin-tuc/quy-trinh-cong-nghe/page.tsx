@@ -1,14 +1,39 @@
 "use client";
 
 import PageHeader from "@/components/ui/PageHeader";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ProcessPage() {
+    const [articles, setArticles] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchArticles = async () => {
+            try {
+                const res = await fetch("/api/news");
+                const data = await res.json();
+                setArticles(data);
+            } catch (error) {
+                console.error("Failed to fetch articles", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchArticles();
+    }, []);
+
+    const processNews = articles.filter(a => a.category === "Tin tức").slice(0, 5);
+
+    if (loading) return null;
+
     return (
         <main className="bg-slate-50 min-h-screen">
             <PageHeader
                 title="Quy Trình & Công Nghệ"
                 description="Hướng dẫn chi tiết quy trình chuẩn y khoa và cảnh báo an toàn thẩm mỹ."
-                backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuC44iNLDBoVx_SSCakXnif0KzO2AihrBEI-BcuFIv4_XE9o5vnKHzcQIt6skZtKEyzFzQQjC5zE6-eX65TGbKepGqf47hpL9GNxhCo-Q_lmloKXI_szN4KOQfzawGPoYpE0ZbbHPOsHjDQwLrsSHm7qL8EJfJDJ8t2O4CwWNJAskiAS6iwvbpP7LFZoMXbJXmDFESLoYNKP8HxUWWcSOZn-LmHJkwAb4uqcp5-M8vD71-LvI6115yJo7GaaXfaOIzCbYJlZO7BPHg"
+                backgroundImage="/image/banner.jpg"
             />
 
             <section className="py-20">
@@ -22,15 +47,22 @@ export default function ProcessPage() {
                                 Hướng Dẫn Quy Trình
                             </h2>
                             <div className="space-y-8">
-                                {[1, 2, 3].map((val) => (
-                                    <div key={val} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-6 group hover:shadow-md transition-all">
-                                        <div className="w-24 h-24 bg-slate-100 rounded-xl shrink-0 flex items-center justify-center text-slate-400">Img</div>
-                                        <div className="flex-1">
-                                            <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">Quy trình chăm sóc sau cắt mí Eye-Lift chuẩn y khoa</h3>
-                                            <p className="text-slate-600 text-sm mb-3">Hướng dẫn vệ sinh vết thương, chườm lạnh/ấm và chế độ ăn uống giúp nếp mí nhanh vào form.</p>
-                                            <button className="text-primary text-sm font-semibold hover:underline">Xem chi tiết</button>
+                                {processNews.map((item) => (
+                                    <Link key={item.id} href={`/tin-tuc/${item.slug}`} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-6 group hover:shadow-md transition-all">
+                                        <div className="w-24 h-24 bg-slate-100 rounded-xl shrink-0 flex items-center justify-center text-slate-400 overflow-hidden relative">
+                                            <Image
+                                                src={item.image || "/image/news/bg-news.jpg"}
+                                                alt={item.title}
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-all"
+                                            />
                                         </div>
-                                    </div>
+                                        <div className="flex-1">
+                                            <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-1">{item.title}</h3>
+                                            <p className="text-slate-600 text-sm mb-3 line-clamp-2">{item.summary}</p>
+                                            <span className="text-primary text-sm font-semibold hover:underline">Xem chi tiết</span>
+                                        </div>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
