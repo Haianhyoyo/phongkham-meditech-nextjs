@@ -22,16 +22,25 @@ export default function ServiceDetailPage() {
                 const data = await res.json();
                 const found = data.find((s: any) => s.slug === slug && s.type === type);
 
+                const safeJsonParse = (str: string | null) => {
+                    if (!str) return [];
+                    try {
+                        return JSON.parse(str);
+                    } catch (e) {
+                        return [];
+                    }
+                };
+
                 if (found) {
-                    // Parse JSON fields
                     const parsed = {
                         ...found,
-                        name: found.title, // Map title to name for layouts
-                        candidates: found.candidates ? JSON.parse(found.candidates) : [],
-                        process: found.process ? JSON.parse(found.process) : [],
-                        faq: found.faq ? JSON.parse(found.faq) : [],
-                        risks: found.risks ? JSON.parse(found.risks) : [],
-                        realImages: found.realImages ? JSON.parse(found.realImages) : []
+                        name: found.title,
+                        candidates: safeJsonParse(found.candidates),
+                        process: safeJsonParse(found.process),
+                        faq: safeJsonParse(found.faq),
+                        risks: safeJsonParse(found.risks),
+                        realImages: safeJsonParse(found.realImages),
+                        shortDesc: found.description || ""
                     };
                     setService(parsed);
                 }

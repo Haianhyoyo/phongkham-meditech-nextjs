@@ -69,15 +69,16 @@ export default function MinorSurgeryLayout({ service }: { service: ServiceData }
                                 </ul>
                             </section>
 
-                            {/* Center Image like sample */}
-                            <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
-                                <Image
-                                    src={service.realImages[0]}
-                                    alt={service.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                            {service.realImages && service.realImages.length > 0 && (
+                                <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
+                                    <Image
+                                        src={service.realImages[0]}
+                                        alt={service.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            )}
 
                             <section>
                                 <h2 className="text-3xl font-display font-black text-[#1A1A1A] mb-6">
@@ -99,7 +100,7 @@ export default function MinorSurgeryLayout({ service }: { service: ServiceData }
                                     Kết quả sau khi {service.name}
                                 </h2>
                                 <div className="grid md:grid-cols-2 gap-8">
-                                    {service.realImages.map((img, idx) => (
+                                    {service.realImages?.map((img, idx) => (
                                         <div key={idx} className="space-y-4">
                                             <div className="text-center">
                                                 <span className="text-[10px] font-sans font-black tracking-widest text-[#B59161] uppercase">

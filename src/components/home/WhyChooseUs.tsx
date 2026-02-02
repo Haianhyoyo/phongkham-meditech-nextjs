@@ -384,8 +384,8 @@ export default function WhyChooseUs() {
                                 <div className="flex flex-col items-center">
                                     <h3 className="text-lg font-display font-bold text-slate-800 mb-4">{hospital.title}</h3>
                                     <div className="flex gap-4">
-                                        <button className="bg-primary text-white px-6 py-2 rounded font-sans font-bold text-xs uppercase hover:bg-primary-dark transition-colors">{hospital.contact_label || "Liên hệ"}</button>
-                                        <button className="bg-primary text-white px-6 py-2 rounded font-sans font-bold text-xs uppercase hover:bg-primary-dark transition-colors">{hospital.direction_label || "Chỉ đường"}</button>
+                                        <Link href="/lien-he" className="bg-primary text-white px-6 py-2 rounded font-sans font-bold text-xs uppercase hover:bg-primary-dark transition-colors">{hospital.contact_label || "Liên hệ"}</Link>
+                                        <Link href="/lien-he" className="bg-primary text-white px-6 py-2 rounded font-sans font-bold text-xs uppercase hover:bg-primary-dark transition-colors">{hospital.direction_label || "Chỉ đường"}</Link>
                                     </div>
                                 </div>
                             </div>
@@ -404,11 +404,11 @@ export default function WhyChooseUs() {
 
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
                         {specialties.map((spec, index) => (
-                            <div key={spec.id} className="flex flex-col items-center group cursor-pointer">
+                            <Link key={spec.id} href={`/dich-vu?category=${spec.title}`} className="flex flex-col items-center group cursor-pointer">
                                 <div className="w-32 h-32 rounded-full border-2 border-blue-400 flex items-center justify-center mb-4 group-hover:bg-blue-50 transition-all shadow-lg group-hover:shadow-blue-200/50 overflow-hidden relative p-4">
                                     <div className="relative w-full h-full group-hover:scale-110 transition-transform duration-500">
                                         <Image
-                                            src={spec.image}
+                                            src={spec.image || ""}
                                             alt={spec.title}
                                             fill
                                             className="object-contain"
@@ -418,14 +418,14 @@ export default function WhyChooseUs() {
                                 <h4 className="text-[11px] font-sans font-bold text-slate-700 uppercase leading-snug tracking-wide max-w-[120px] text-center">
                                     {spec.title}
                                 </h4>
-                            </div>
+                            </Link>
                         ))}
                     </div>
 
                     <div className="flex justify-center">
-                        <button className="bg-primary hover:bg-primary-dark text-white px-10 py-3 font-sans font-bold uppercase tracking-wider text-sm transition-colors shadow-lg shadow-primary/30">
+                        <Link href="/chuyen-khoa" className="bg-primary hover:bg-primary-dark text-white px-10 py-3 font-sans font-bold uppercase tracking-wider text-sm transition-colors shadow-lg shadow-primary/30">
                             Xem thêm
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

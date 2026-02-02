@@ -70,14 +70,16 @@ export default function MajorSurgeryLayout({ service }: { service: ServiceData }
                                 </p>
                             </section>
 
-                            <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
-                                <Image
-                                    src={service.realImages[0]}
-                                    alt={service.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                            {service.realImages && service.realImages.length > 0 && (
+                                <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
+                                    <Image
+                                        src={service.realImages[0]}
+                                        alt={service.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            )}
 
                             {/* Risks & Control Section */}
                             <section>
@@ -103,7 +105,7 @@ export default function MajorSurgeryLayout({ service }: { service: ServiceData }
                                     Kết quả thay đổi diện mạo
                                 </h2>
                                 <div className="grid md:grid-cols-2 gap-8">
-                                    {service.realImages.map((img, idx) => (
+                                    {service.realImages?.map((img, idx) => (
                                         <div key={idx} className="space-y-4">
                                             <div className="text-center">
                                                 <span className="text-[10px] font-sans font-black tracking-widest text-[#D4AF37] uppercase">

@@ -156,9 +156,23 @@ export default function Navbar() {
 
                         {/* Search / Action */}
                         <div className="flex items-center gap-4 pl-8 border-l border-white/20 py-2">
-                            <button className="p-2 text-blue-100 hover:text-white transition-colors">
-                                <span className="material-symbols-outlined text-xl">search</span>
-                            </button>
+                            <form onSubmit={(e) => {
+                                e.preventDefault();
+                                const query = (e.currentTarget.elements.namedItem('q') as HTMLInputElement).value;
+                                if (query.trim()) {
+                                    window.location.href = `/tim-kiem?q=${encodeURIComponent(query)}`;
+                                }
+                            }} className="relative">
+                                <input
+                                    type="text"
+                                    name="q"
+                                    placeholder="Tìm kiếm..."
+                                    className="bg-blue-800/50 text-white placeholder-blue-300 rounded-full py-1.5 pl-4 pr-10 text-sm focus:outline-none focus:bg-blue-900 transition-colors w-40 focus:w-60"
+                                />
+                                <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 p-1 text-blue-200 hover:text-white transition-colors">
+                                    <span className="material-symbols-outlined text-lg">search</span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

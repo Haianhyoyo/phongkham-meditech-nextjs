@@ -36,6 +36,37 @@ export default function NewsPage() {
 
             <section className="py-24 bg-slate-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* News Search */}
+                    <div className="max-w-2xl mx-auto mb-12">
+                        <div className="bg-white p-2 rounded-full shadow-md border border-slate-100 flex">
+                            <div className="flex-1 flex items-center px-4 gap-3">
+                                <span className="material-symbols-outlined text-slate-400">search</span>
+                                <input
+                                    type="text"
+                                    placeholder="Tìm kiếm tin tức..."
+                                    className="w-full h-full py-2 outline-none text-slate-700 bg-transparent"
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') {
+                                            const val = e.currentTarget.value;
+                                            if (val.trim()) window.location.href = `/tim-kiem?q=${encodeURIComponent(val)}`;
+                                        }
+                                    }}
+                                />
+                            </div>
+                            <button
+                                className="bg-primary text-white rounded-full px-6 py-2 font-bold hover:bg-primary-dark transition-colors"
+                                onClick={(e) => {
+                                    const input = e.currentTarget.parentElement?.querySelector('input');
+                                    if (input && input.value.trim()) {
+                                        window.location.href = `/tim-kiem?q=${encodeURIComponent(input.value)}`;
+                                    }
+                                }}
+                            >
+                                Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+
                     {/* Category Navigation */}
                     <div className="flex flex-wrap justify-center gap-4 mb-12">
                         <Link href="/tin-tuc/kien-thuc-cong-nghe" className="px-6 py-3 bg-white rounded-full border border-slate-200 text-slate-600 font-semibold hover:border-primary hover:text-primary transition-all shadow-sm hover:shadow-md">

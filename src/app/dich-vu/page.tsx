@@ -13,7 +13,7 @@ const services = [
         description: "Kỹ thuật cắt mí ít xâm lấn, loại bỏ mỡ thừa và kiến tạo nếp mí tự nhiên, mang lại đôi mắt có hồn và trẻ trung.",
         price: "12.000.000đ",
         image: "/image/Gemini_Generated_Image_s33nu7s33nu7s33n.png",
-        href: "/dich-vu/tham-my-mat"
+        href: "/dich-vu/tieu-phau/cat-mi"
     },
     {
         title: "Nâng mũi cấu trúc Meditech",
@@ -21,7 +21,7 @@ const services = [
         description: "Tái cấu trúc toàn diện dáng mũi bằng sụn tự thân và sụn nhân tạo cao cấp, đảm bảo độ bền vững và vẻ đẹp hài hòa.",
         price: "35.000.000đ",
         image: "/image/unnamed.jpg",
-        href: "/dich-vu/tham-my-mui"
+        href: "/dich-vu/dai-phau/nang-mui-cau-truc"
     },
     {
         title: "Tạo hình môi trái tim",
@@ -29,7 +29,7 @@ const services = [
         description: "Tiểu phẫu thu gọn và tạo hình đường cong môi quyến rũ, cân đối tỉ lệ gương mặt theo phong cách Á Đông.",
         price: "8.000.000đ",
         image: "/image/unnamed (2).jpg",
-        href: "#"
+        href: "/dich-vu/tieu-phau/thu-gon-moi"
     },
     {
         title: "Căng da mặt toàn phần",
@@ -37,7 +37,7 @@ const services = [
         description: "Giải pháp tối ưu cho tình trạng lão hóa nặng, giúp xóa mờ nếp nhăn và nâng cơ chảy xệ, trẻ hóa đến 10-15 tuổi.",
         price: "60.000.000đ",
         image: "/image/unnamed (3).jpg",
-        href: "#"
+        href: "/dich-vu/dai-phau/cang-da-mat-co"
     },
     {
         title: "Hút mỡ SlimLipo Vaser",
@@ -45,7 +45,7 @@ const services = [
         description: "Công nghệ hút mỡ hiện đại từ Hoa Kỳ giúp loại bỏ mỡ thừa vùng bụng, đùi một cách nhanh chóng, không gồ ghề.",
         price: "45.000.000đ",
         image: "/image/unnamed (4).jpg",
-        href: "#"
+        href: "/dich-vu/dai-phau/hut-mo-tao-hinh"
     },
     {
         title: "Gói phục hồi công nghệ cao",
@@ -61,7 +61,7 @@ const services = [
         description: "Công nghệ Laser tân tiến loại bỏ sắc tố melanin tận gốc, trả lại làn da đều màu.",
         price: "Liên hệ",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBT0y2Pb0pw0Zzb5RQzdUirmvXQ5YjcNmiczeoiP9zQJ5KncrCMsoxmu0W9nqQLqWErNuh2U8u9oehiS_DHSkIGsv3p3OenHDZqvn_5FVSo0-FBygfgcNAxOY7qmyPohIjZnWrB6lmnzWrxnlyagcC3F0ZcVuuTNcJt_96mhd65If8Vz-rwXUjQZfUobcrHJVNKkeBfc3mZNtbE4cufCVyQv4HvytBx7hduDV6Myqw66-2EC5rk3r0EFWbkuQ7899r-sE_ahZsZHA",
-        href: "/dich-vu/tri-nam-chuyen-sau"
+        href: "/dich-vu/tieu-phau/tri-seo"
     },
     {
         title: "Trẻ hóa da Multi-layer",
@@ -69,7 +69,7 @@ const services = [
         description: "Kích thích tăng sinh collagen tự thân, xóa mờ nếp nhăn và phục hồi độ đàn hồi.",
         price: "Liên hệ",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAMLSveAcKu95wXQGIhg3RMLhRR4r1P4pPSKGjBU1PYTM5E-DhkMRmcurl3syAla5Bn7fUSuqPmgnroZ3AZomKa4TyONg0pJe_1QDbDLkG0TdmsOfxKbCR6MvLhf_7XRmYm6rZS00IqPygMYtRdc6qHcOlct7c__W5l90rH17GbBd-5rHPrBFHVSZ-FRPnXVM6O0q-AR47NqDWyfxtTRDOsPYLusoAFU457N7Q4qjc6QIxycKtqB3VMKuRttj982g2zW-Vd6_IyXw",
-        href: "/dich-vu/tre-hoa-da-multi-layer"
+        href: "/dich-vu/tieu-phau/cay-mo-tu-than"
     },
     {
         title: "Nâng cơ Hifu Pro",
@@ -77,7 +77,7 @@ const services = [
         description: "Sử dụng sóng siêu âm hội tụ cường độ cao giúp thon gọn gương mặt không phẫu thuật.",
         price: "15.000.000đ",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBv009JdO-ATSadqYbboaEt8Mh_5nN1x8y8kGMs0mBcVpj6okpzQvMb49diZozphQZ9JcNsOQmJXv_n9Ej2N0C7V9wdyo1ENM3AfGCGzbg6ZidDiVGNdUnMJY8b2vNTM8B-6GoL5r877HImL_pO9XK9JHBGH1YxdAecAqujqJM9289kELLswb0QnFDShH7bF_9_7D54q8LzRnt7GRNLkCMJfAjzB3eA0y7THZQnabNDk-sSz0WLId3kSQyeZinz_5-I1H5ISoEZTw",
-        href: "/dich-vu/nang-co-hifu-pro"
+        href: "/dich-vu/dai-phau/cang-da-mat-co"
     },
     {
         title: "Điều trị mụn y khoa",
@@ -85,7 +85,7 @@ const services = [
         description: "Phác đồ chuẩn y khoa kết hợp ánh sáng sinh học giúp sạch mụn và ngăn ngừa thâm sẹo.",
         price: "300.000đ",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDyKfYe5R7nL12rlD-FR-SD0OMS8iFKl60Ihar2_RXNStVsLTquAw92nYPg9IIT4Ci5959ti3b09PXCdht9nf4AqmL1RKGABqcCL4fDg5EFTdW31WMOnnbZaLGQTbtWy7c_uhbppbBC7dpKWHs_cX-aL7-o3X0DZK5tLXCBsB7l6lo8sRE_jZtGlVvT3EFRA3iGlvMjE5XJPrYZYfILJR5GMbsJtv_SUJOmiBF1uLeNz-pS3Imlmnj1KzTMW0Cyl_62VsCb_aj3vA",
-        href: "/dich-vu/dieu-tri-mun-y-khoa"
+        href: "/dich-vu/tieu-phau/tri-seo"
     }
 ];
 
@@ -103,8 +103,20 @@ const filters = [
     "Chăm sóc hậu phẫu"
 ];
 
-export default function ServicesPage() {
-    const [activeCategory, setActiveCategory] = useState("Tất cả");
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+
+function ServicesContent() {
+    const searchParams = useSearchParams();
+    const categoryQuery = searchParams.get("category");
+    // Use decodeURIComponent to handle URL encoded strings if necessary, but searchParams.get usually handles basic decoding.
+    // However, category in URL might be "Thẩm mỹ mắt" encoded.
+    const [activeCategory, setActiveCategory] = useState(categoryQuery || "Tất cả");
+
+    // Update activeCategory if URL changes (optional, but good for navigation)
+    // useEffect(() => {
+    //     if (categoryQuery) setActiveCategory(categoryQuery);
+    // }, [categoryQuery]);
 
     const filteredServices = activeCategory === "Tất cả"
         ? services
@@ -216,5 +228,13 @@ export default function ServicesPage() {
 
             <CTASection />
         </main>
+    );
+}
+
+export default function ServicesPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ServicesContent />
+        </Suspense>
     );
 }
