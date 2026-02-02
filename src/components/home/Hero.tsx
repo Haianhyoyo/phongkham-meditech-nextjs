@@ -71,90 +71,79 @@ export default function Hero() {
                     className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentSlide ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
                         }`}
                 >
-                    {/* Background with Grid/Tech Patterns */}
-                    <div className={`absolute inset-0 ${slide.bgColor} z-0`}>
-                        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)", backgroundSize: "40px 40px" }}></div>
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.3)_100%)]"></div>
-
-                        {/* High-tech SVG Decoration */}
-                        <svg className="absolute -bottom-20 -left-20 w-[600px] h-[600px] text-white/5 opacity-20 rotate-12" viewBox="0 0 100 100">
-                            <path d="M10,50 Q25,25 50,50 T90,50" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.1" strokeDasharray="2,2" />
-                            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.2" />
-                        </svg>
+                    {/* Main Background Image - Always Full-Width */}
+                    <div className="absolute inset-0 z-0">
+                        <Image
+                            src={slide.image}
+                            alt={slide.title || "Meditech Banner"}
+                            fill
+                            className="object-cover transition-transform duration-[10000ms] ease-out scale-100 group-hover:scale-110"
+                            priority
+                        />
+                        {/* Gradient Overlays for Readability */}
+                        {!(slide as any).isBanner && (
+                            <>
+                                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/40 to-transparent z-10"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent z-10"></div>
+                            </>
+                        )}
+                        {/* Always show a subtle overlay for banners to maintain brand feel */}
+                        {(slide as any).isBanner && (
+                            <div className="absolute inset-0 bg-black/10 z-10"></div>
+                        )}
                     </div>
 
-                    {/* Content Layer */}
-                    {(slide as any).isBanner ? (
-                        <div className="absolute inset-0 z-10 h-full w-full">
-                            <Image
-                                src={slide.image}
-                                alt="Khuyến mãi Tết"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
+                    {/* Tech Patterns (Only for non-banners or as very subtle decoration) */}
+                    {!(slide as any).isBanner && (
+                        <div className="absolute inset-0 z-15 opacity-20 pointer-events-none">
+                            <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)", backgroundSize: "60px 60px" }}></div>
+                            <svg className="absolute -bottom-20 -left-20 w-[600px] h-[600px] text-white/10" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.1" strokeDasharray="2,2" />
+                            </svg>
                         </div>
-                    ) : (
-                        <div className="relative z-10 h-full max-w-[1400px] mx-auto px-6 grid md:grid-cols-12 gap-8 items-center pt-20">
-                            {/* Left Info */}
-                            <div className="md:col-span-5 text-white order-2 md:order-1">
-                                <div className="flex items-center gap-4 mb-8">
-                                    <div className="w-12 h-12 bg-white flex items-center justify-center rounded-lg shadow-lg">
-                                        <img src="/image/favicon_square.png" alt="Logo" className="w-8 h-8 object-contain" />
+                    )}
+
+                    {/* Content Layer - Overlayed on background */}
+                    {!(slide as any).isBanner && (
+                        <div className="relative z-20 h-full max-w-[1400px] mx-auto px-6 flex flex-col justify-center pt-10">
+                            <div className="max-w-4xl">
+                                {/* Category Badge */}
+                                <div className="flex items-center gap-4 mb-6 animate-fade-in-up">
+                                    <div className="w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center rounded-lg border border-white/20">
+                                        <img src="/image/favicon_square.png" alt="Logo" className="w-6 h-6 object-contain" />
                                     </div>
-                                    <div className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase max-w-[200px] leading-tight opacity-90">
+                                    <div className="text-[10px] md:text-xs font-black tracking-[0.3em] uppercase text-white/80 leading-tight">
                                         {(slide as any).category}
                                     </div>
                                 </div>
 
-                                <h2 className="text-4xl md:text-7xl font-display font-black leading-[1] mb-4 drop-shadow-2xl">
+                                {/* Main Heading */}
+                                <h2 className="text-4xl md:text-8xl font-display font-black leading-[0.9] mb-4 text-white drop-shadow-2xl animate-fade-in-up [animation-delay:200ms]">
                                     {(slide as any).title}
                                 </h2>
-                                <h3 className="text-2xl md:text-5xl font-sans font-black text-yellow-400 leading-tight mb-10 tracking-tight">
+                                <h3 className="text-2xl md:text-5xl font-sans font-black text-yellow-400 leading-tight mb-10 tracking-tight animate-fade-in-up [animation-delay:400ms]">
                                     {(slide as any).subtitle}
                                 </h3>
 
-                                <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full border border-white/30 mb-12 group hover:bg-white hover:text-primary transition-all cursor-pointer">
-                                    <span className="material-symbols-outlined text-red-500 font-black animate-pulse">location_on</span>
-                                    <span className="font-bold text-sm md:text-base tracking-tight uppercase">{(slide as any).footer}</span>
-                                    <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
-                                </div>
-                            </div>
-
-                            {/* Center Image Area */}
-                            <div className="md:col-span-4 h-full relative flex items-center justify-center order-1 md:order-2">
-                                <div className="relative w-full aspect-square md:scale-125">
-                                    <Image
-                                        src={slide.image}
-                                        alt={(slide as any).title}
-                                        fill
-                                        className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                                        priority
-                                    />
-                                    {/* Glowing halo behind image */}
-                                    <div className="absolute inset-0 bg-blue-400/20 blur-[100px] rounded-full -z-10 animate-pulse"></div>
-                                </div>
-                            </div>
-
-                            {/* Right Features */}
-                            <div className="md:col-span-3 space-y-8 order-3">
-                                <div className="text-center md:text-left mb-8">
-                                    <h4 className="text-white font-sans font-black text-sm md:text-lg uppercase tracking-wider mb-2">Công nghệ đỉnh cao</h4>
-                                    <div className="w-12 h-0.5 bg-primary-dark mx-auto md:ml-0"></div>
-                                </div>
-
-                                {(slide as any).features?.map((feat: any, i: number) => (
-                                    <div key={i} className="flex items-center md:items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-colors group">
-                                        <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                                            <span className="material-symbols-outlined text-primary group-hover:text-white">{feat.icon}</span>
-                                        </div>
-                                        <div>
-                                            <div className="text-white font-bold text-sm md:text-base leading-tight mb-1">{feat.label}</div>
-                                            <div className="text-primary-dark text-[11px] md:text-xs font-medium uppercase tracking-widest">{feat.desc}</div>
-                                        </div>
+                                {/* Bottom Info Row */}
+                                <div className="flex flex-wrap items-center gap-6 animate-fade-in-up [animation-delay:600ms]">
+                                    <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-primary transition-all cursor-pointer">
+                                        <span className="material-symbols-outlined text-red-500 font-black">location_on</span>
+                                        <span className="font-bold text-sm tracking-tight uppercase">{(slide as any).footer}</span>
                                     </div>
-                                ))}
+
+                                    {/* Feature Icons Row */}
+                                    <div className="hidden lg:flex items-center gap-8 pl-6 border-l border-white/20">
+                                        {(slide as any).features?.slice(0, 2).map((feat: any, i: number) => (
+                                            <div key={i} className="flex items-center gap-3 group/feat">
+                                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover/feat:bg-primary transition-colors">
+                                                    <span className="material-symbols-outlined text-white text-lg">{feat.icon}</span>
+                                                </div>
+                                                <div className="text-white/80 text-[10px] font-bold uppercase tracking-widest">{feat.label}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     )}
